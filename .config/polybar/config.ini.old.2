@@ -1,0 +1,193 @@
+[colors]
+; Tokyo Night Dark theme ============
+background = #24283b
+foreground = #c0caf5
+alert = #e06c75
+volume-min = #a3be8c
+volume-med = #ebcb8b
+volume-max = #bf616a
+pink = #f7768e
+orange = #ff9e64
+dark-orange = #e0af68
+green = #9ece6a
+teal = #73daca
+light-blue = #b4f9f8
+cyan = #2ac3de
+blue = #7dcfff
+blurple = #7aa2f7
+purple = #bb9af7
+light-purple = #c0caf5
+light-dark-purple = #a9b1d6
+dark-purple = #9aa5ce
+beige = #cfc9c2
+really-dark-purple = #565f89
+black = #414868
+really-black = #24283b
+blacker = #1a1b26
+
+[bar/main]
+width = 90%
+height = 22
+radius = 9
+
+offset-x = 5%
+offset-y = 1%
+
+fix-center = true
+bottom = false
+
+monitor = ${env:MONITOR:}
+
+; dpi = 96
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3pt
+
+; border-size = 0pt
+; border-color = #00000000
+
+padding-left = 1
+padding-right = 1
+
+module-margin = 1
+
+separator = |
+separator-foreground = ${colors.disabled}
+
+font-0 = "JetBRainsMono Nerd Font:size=10;2"
+
+modules-left = xworkspaces xwindow
+modules-center = 
+modules-right = music mail upt filesystem pavolume memory cpu eth date
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+enable-ipc = true
+
+tray-position = none
+
+; wm-restack = generic
+wm-restack = bspwm
+; wm-restack = i3
+
+; override-redirect = true
+
+[module/xworkspaces]
+type = internal/xworkspaces
+
+label-active = %icon%
+label-active-background = ${colors.background}
+label-active-foreground =  ${colors.orange}
+label-active-padding = 1
+
+label-occupied = %icon%
+label-occupied-background = ${colors.background}
+label-occupied-foreground = ${colors.blue}
+label-occupied-padding = 1
+
+label-urgent = %icon%
+label-urgent-background = ${colors.green}
+label-urgent-padding = 1
+
+label-empty = %icon%
+label-empty-foreground = ${colors.foreground}
+label-empty-padding = 1
+
+icon-0 = 1;
+icon-1 = 2;爵
+icon-2 = 3;ﭮ
+icon-3 = 4;
+icon-4 = 5;墳
+icon-5 = 6;6
+icon-6 = 7;7
+icon-7 = 8;8
+icon-8 = 9;
+icon-9 = 0;
+icon-default = 
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:60:...%
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+format-mounted-prefix = "  "
+format-mounted-prefix-foreground = ${colors.green}
+label-mounted = %percentage_used%%
+
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.disabled}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume-prefix = "VOL "
+format-volume-prefix-foreground = ${colors.primary}
+format-volume = <label-volume>
+
+label-volume = %percentage%%
+
+label-muted = muted
+label-muted-foreground = ${colors.disabled}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.green}
+label = %percentage_used:2%%
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "﬙ "
+format-prefix-foreground = ${colors.green}
+label = %percentage:2%%
+
+[network-base]
+type = internal/network
+interval = 5
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
+
+[module/wlan]
+inherit = network-base
+interface-type = wireless
+label-connected = %{F#F0C674}%ifname%%{F-} %essid% %local_ip%
+
+[module/eth]
+inherit = network-base
+interface-type = wired
+label-connected = %{F#F0C674}%ifname%%{F-} %local_ip%
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = %H:%M
+date-alt = %Y-%m-%d %H:%M:%S
+
+label = %date%
+label-foreground = ${colors.primary}
+
+[module/music]
+type = custom/script
+interval = 120
+format-prefix = " "
+format-prefix-foreground = ${colors.green}
+exec = bash ~/scripts/song.sh
+
+[settings]
+screenchange-reload = true
+pseudo-transparency = true
+
+; vim:ft=dosini
+

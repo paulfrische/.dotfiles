@@ -1,0 +1,53 @@
+env:
+  TERM: xterm-256color
+window:
+  padding:
+   x: 0
+   y: 0
+  # opacity: 0.9
+font:
+  normal:
+    family: UbuntuMono Nerd Font
+    style: Regular
+  bold:
+    family: UbuntuMono Nerd Font
+    style: Bold
+  italic:
+    family: UbuntuMono Nerd Font
+    style: Italic
+  bold_italic:
+    family: UbuntuMono Nerd Font
+    style: Bold Italic
+  size: 17.0
+
+schemes:
+  codedark: &dark
+    primary:
+      background: '#000000'
+      foreground: '#d4d4d4'
+
+    cursor:
+      text: '#d4d4d4'
+      cursor: '#d4d4d4'
+
+    normal:
+      black:   '#1e1e1e'
+      red:     '#f44747'
+      green:   '#608b4e'
+      yellow:  '#dcdcaa'
+      blue:    '#569cd6'
+      magenta: '#c678dd'
+      cyan:    '#56b6c2'
+      white:   '#d4d4d4'
+
+    bright:
+      black:   '#545454'
+      red:     '#f44747'
+      green:   '#608b4e'
+      yellow:  '#dcdcaa'
+      blue:    '#569cd6'
+      magenta: '#c678dd'
+      cyan:    '#56b6c2'
+      white:   '#d4d4d4'
+
+colors: *dark
