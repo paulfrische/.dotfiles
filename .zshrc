@@ -33,6 +33,7 @@ alias docker="doas podman"
 alias lg="lazygit"
 alias vc="nvim --cmd 'set rtp+=.'"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias config-add='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add -u'
 
 colorscript random
 eval "$(starship init zsh)"
