@@ -31,4 +31,5 @@ chromium &
 
 xrandr --output DP-1 --left-of HDMI-0
 xrandr --output DP-1 --primary
+xset -r rate 300 50
 setxkbmap eu
