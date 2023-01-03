@@ -114,11 +114,6 @@ _G.packer_plugins = {
     path = "/home/paul/.local/share/nvim/site/pack/packer/start/compit",
     url = "https://github.com/PythonPizzaDE/compit"
   },
-  delimitMate = {
-    loaded = true,
-    path = "/home/paul/.local/share/nvim/site/pack/packer/start/delimitMate",
-    url = "https://github.com/Raimondi/delimitMate"
-  },
   ["dressing.nvim"] = {
     loaded = true,
     path = "/home/paul/.local/share/nvim/site/pack/packer/start/dressing.nvim",
@@ -143,11 +138,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/paul/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
-  },
-  ["inlay-hints.nvim"] = {
-    loaded = true,
-    path = "/home/paul/.local/share/nvim/site/pack/packer/start/inlay-hints.nvim",
-    url = "https://github.com/simrat39/inlay-hints.nvim"
   },
   ["kanagawa.nvim"] = {
     loaded = true,

@@ -19,7 +19,7 @@ return require('packer').startup({
         use('tpope/vim-surround')
         use('ryanoasis/vim-devicons')
         use('norcalli/nvim-colorizer.lua')
-        use('Raimondi/delimitMate')
+        -- use('Raimondi/delimitMate')
         use({ 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } })
         use({ 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } })
         use('kdheepak/lazygit.nvim')
