@@ -25,7 +25,6 @@ return require('packer').startup({
         use('kdheepak/lazygit.nvim')
         use('f-person/git-blame.nvim')
         use('lukas-reineke/indent-blankline.nvim')
-        use('lvimuser/lsp-inlayhints.nvim')
         use('nvim-telescope/telescope.nvim')
         use('nvim-telescope/telescope-file-browser.nvim')
         use('olacin/telescope-cc.nvim')
@@ -33,6 +32,8 @@ return require('packer').startup({
             'nvim-neotest/neotest',
             requires = { 'nvim-lua/plenary.nvim', 'nvim-treesitter/nvim-treesitter', 'antoinemadec/FixCursorHold.nvim', 'nvim-neotest/neotest-python' },
         })
+        use ('shortcuts/no-neck-pain.nvim')
+        use({ "nvim-neorg/neorg", requires = "nvim-lua/plenary.nvim", run = ":Neorg sync-parsers" })
         use('ahmedkhalf/project.nvim')
         use('stevearc/dressing.nvim')
         use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable('make') == 1 })

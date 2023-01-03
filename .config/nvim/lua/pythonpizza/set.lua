@@ -34,3 +34,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     group = highlight_group,
     pattern = '*',
 })
+
+-- Don't auto comment new line
+vim.api.nvim_create_autocmd("BufEnter", { command = [[set formatoptions-=cro]] })

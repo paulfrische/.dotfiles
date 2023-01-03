@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/paul/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["inlay-hints.nvim"] = {
+    loaded = true,
+    path = "/home/paul/.local/share/nvim/site/pack/packer/start/inlay-hints.nvim",
+    url = "https://github.com/simrat39/inlay-hints.nvim"
+  },
   ["kanagawa.nvim"] = {
     loaded = true,
     path = "/home/paul/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
@@ -153,11 +158,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/paul/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
-  },
-  ["lsp-inlayhints.nvim"] = {
-    loaded = true,
-    path = "/home/paul/.local/share/nvim/site/pack/packer/start/lsp-inlayhints.nvim",
-    url = "https://github.com/lvimuser/lsp-inlayhints.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/paul/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  neorg = {
+    loaded = true,
+    path = "/home/paul/.local/share/nvim/site/pack/packer/start/neorg",
+    url = "https://github.com/nvim-neorg/neorg"
+  },
   neotest = {
     loaded = true,
     path = "/home/paul/.local/share/nvim/site/pack/packer/start/neotest",
@@ -193,6 +198,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/paul/.local/share/nvim/site/pack/packer/start/neotest-python",
     url = "https://github.com/nvim-neotest/neotest-python"
+  },
+  ["no-neck-pain.nvim"] = {
+    loaded = true,
+    path = "/home/paul/.local/share/nvim/site/pack/packer/start/no-neck-pain.nvim",
+    url = "https://github.com/shortcuts/no-neck-pain.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,

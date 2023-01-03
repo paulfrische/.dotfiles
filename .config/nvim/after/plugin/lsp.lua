@@ -7,7 +7,6 @@ lsp.nvim_workspace()
 
 lsp.ensure_installed({
     'pyright',
-    'tsserver',
 })
 
 local cmp = require('cmp')
@@ -27,6 +26,7 @@ lsp.setup_nvim_cmp({
     mapping = cmp_mappings,
     sources = {
         { name = 'nvim_lsp' },
+        { name = 'neorg' },
     },
     window = {
         completion = {
