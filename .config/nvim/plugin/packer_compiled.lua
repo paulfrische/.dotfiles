@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/paul/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "/home/paul/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/paul/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -297,6 +302,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/paul/.local/share/nvim/site/pack/packer/start/vscode.nvim",
     url = "https://github.com/Mofiqul/vscode.nvim"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/paul/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 

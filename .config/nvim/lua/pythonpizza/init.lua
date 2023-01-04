@@ -27,6 +27,7 @@ return require('packer').startup({
         use('lukas-reineke/indent-blankline.nvim')
         use('nvim-telescope/telescope.nvim')
         use('nvim-telescope/telescope-file-browser.nvim')
+        use('folke/which-key.nvim')
         use('olacin/telescope-cc.nvim')
         use({
             'nvim-neotest/neotest',
@@ -40,6 +41,7 @@ return require('packer').startup({
         use('rebelot/kanagawa.nvim')
         use('folke/tokyonight.nvim')
         use('Mofiqul/vscode.nvim')
+        use('lewis6991/impatient.nvim')
         use('mfussenegger/nvim-dap')
         use('wbthomason/packer.nvim')
 
