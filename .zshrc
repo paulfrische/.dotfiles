@@ -2,6 +2,8 @@ export PATH="$PATH:$HOME/.local/bin"
 export ZSH="$HOME/.oh-my-zsh"
 export XDG_CONFIG_HOME="$HOME/.config"
 
+ZSH_THEME="alanpeabody"
+
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
 
@@ -36,4 +38,4 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias config-add='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add -u'
 
 colorscript random
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"

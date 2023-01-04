@@ -19,6 +19,7 @@ bspc config gapless_monocle      true
 bspc rule -a Chromium desktop='2'
 bspc rule -a discord desktop='3'
 bspc rule -a Spotify desktop='0'
+bspc rule -a Mail desktop='8'
 bspc rule -a mpv manage=off state=floating
 
 picom &
@@ -28,6 +29,7 @@ nitrogen --restore &
 flatpak run com.discordapp.Discord &
 flatpak run com.spotify.Client &
 chromium &
+thunderbird &
 
 xrandr --output DP-1 --left-of HDMI-0
 xrandr --output DP-1 --primary
