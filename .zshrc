@@ -19,6 +19,11 @@ else
   export EDITOR='nvim'
 fi
 
+function mkcd() {
+    mkdir $1
+    cd $1
+}
+
 bindkey -v
 alias v="nvim"
 alias p="python3.10"
