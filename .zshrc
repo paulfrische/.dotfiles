@@ -7,7 +7,7 @@ ZSH_THEME="alanpeabody"
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
 
-plugins=(git zsh-nvm python)
+plugins=(git zsh-nvm python z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -30,7 +30,7 @@ alias p="python3.10"
 alias n="nvim ."
 alias nrcj="cd ~/.config/nvim/ && nvim init.lua"
 alias nkitty="nvim ~/.config/kitty/kitty.conf"
-alias ls="exa -lah --icons"
+alias ls="exa -lah --icons -rtchanged"
 alias nzsh="nvim ~/.zshrc"
 alias jbsp="cd ~/.config/bspwm"
 alias mountd="doas mount /dev/sdb ~/d"
@@ -41,6 +41,8 @@ alias lg="lazygit"
 alias vc="nvim --cmd 'set rtp+=.'"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias config-add='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add -u'
+
+zstyle ':completion:*' menu select
 
 colorscript random
 # eval "$(starship init zsh)"

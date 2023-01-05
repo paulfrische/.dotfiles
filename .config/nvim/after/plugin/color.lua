@@ -11,14 +11,16 @@ require('tokyonight').setup({
 
 function Color(c)
     c = c or 'tokyonight'
-    vim.cmd.colorscheme(c)
-
     if c == 'vscode' then
+
         require('vscode').setup({
             transparent = transparent
         })
         return
     end
+
+    vim.cmd.colorscheme(c)
+
 
     if transparent then
         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -26,4 +28,4 @@ function Color(c)
     end
 end
 
-Color('vscode')
+Color()

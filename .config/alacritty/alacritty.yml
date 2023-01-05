@@ -2,8 +2,8 @@ env:
   TERM: xterm-256color
 window:
   padding:
-   x: 0
-   y: 0
+   x: 3
+   y: 3
   # opacity: 0.9
 font:
   normal:
@@ -18,7 +18,7 @@ font:
   bold_italic:
     family: UbuntuMono Nerd Font
     style: Bold Italic
-  size: 17.0
+  size: 15.0
 
 schemes:
   codedark: &dark
