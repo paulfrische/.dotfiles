@@ -28,7 +28,7 @@ nitrogen --restore &
  
 flatpak run com.discordapp.Discord &
 flatpak run com.spotify.Client &
-chromium &
+flatpak run com.github.Eloston.UngoogledChromium &
 thunderbird &
 
 xrandr --output DP-1 --left-of HDMI-0

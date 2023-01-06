@@ -14,7 +14,7 @@ function Color(c)
     if c == 'vscode' then
 
         require('vscode').setup({
-            transparent = transparent
+            transparent = transparent,
         })
         return
     end
