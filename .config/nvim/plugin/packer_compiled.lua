@@ -199,6 +199,16 @@ _G.packer_plugins = {
     path = "/home/paul/.local/share/nvim/site/pack/packer/start/no-neck-pain.nvim",
     url = "https://github.com/shortcuts/no-neck-pain.nvim"
   },
+  ["noice.nvim"] = {
+    loaded = true,
+    path = "/home/paul/.local/share/nvim/site/pack/packer/start/noice.nvim",
+    url = "https://github.com/folke/noice.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/paul/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/paul/.local/share/nvim/site/pack/packer/start/nvim-cmp",

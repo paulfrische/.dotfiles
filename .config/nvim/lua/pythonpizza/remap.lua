@@ -19,3 +19,6 @@ end, {})
 -- move around text in visual-mode
 vim.keymap.set('v', '<C-j>', ':m \'>+1<CR>gv=gv', {})
 vim.keymap.set('v', '<C-k>', ':m \'<-2<CR>gv=gv', {})
+
+-- file explorer
+vim.keymap.set('n', '<leader>x', ':Explore<CR>', {})

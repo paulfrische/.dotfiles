@@ -34,6 +34,9 @@ return require('packer').startup({
             'nvim-neotest/neotest',
             requires = { 'nvim-lua/plenary.nvim', 'nvim-treesitter/nvim-treesitter', 'antoinemadec/FixCursorHold.nvim', 'nvim-neotest/neotest-python' },
         })
+        use('folke/noice.nvim')
+        use('MunifTanjim/nui.nvim')
+        use({ "folke/noice.nvim", requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", } })
         use ('shortcuts/no-neck-pain.nvim')
         use({ "nvim-neorg/neorg", requires = "nvim-lua/plenary.nvim", run = ":Neorg sync-parsers" })
         use('ahmedkhalf/project.nvim')
