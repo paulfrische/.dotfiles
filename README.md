@@ -7,4 +7,6 @@ $ stow -v -t $HOME <config>
 To install everything just execute the install script
 ```
 $ ./install.sh
+$ # uninstalling works by executing the uninstall script
+$ ./uninstall.sh
 ```
