@@ -1,0 +1,23 @@
+[user]
+    email = 61984114+paulfrische@users.noreply.github.com
+    name = Paul Frische
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = nvim
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    light = false
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
