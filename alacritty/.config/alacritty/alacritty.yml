@@ -3,8 +3,8 @@ env:
 
 window:
   padding:
-   x: 4
-   y: 4
+   x: 8
+   y: 8
   # opacity: 0.9
   dynamic_title: true
 font:
