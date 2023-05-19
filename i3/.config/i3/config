@@ -1,3 +1,25 @@
+# class                 border  backgr. text    indicator child_border
+client.focused          #7aa2f7 #7aa2f7 #24283b #0db9d7   #0db9d7
+client.focused_inactive #3d59a1 #3d59a1 #1f2335 #2ac3de   #2ac3de
+client.unfocused        #3d59a1 #3d59a1 #1f2335 #2ac3de   #2ac3de
+
+bar {
+        status_command i3status
+        position top
+
+        colors {
+            background #1f2335
+            statusline #c0caf5
+            separator #bb9af7
+
+            focused_workspace  #7aa2f7 #7aa2f7 #24283b
+            active_workspace   #7aa2f7 #7aa2f7 #24283b
+            inactive_workspace #3d59a1 #3d59a1 #1f2335
+            urgent_workspace   #1abc9c #1abc9c #1f2335
+            binding_mode       #2f343a #900000 #ffffff
+        }
+}
+
 set $mod Mod4
 
 font pango:Iosevka Nerd Font 10
@@ -111,12 +133,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bar {
-        status_command i3status
-        position top
-}
-
-
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 1
 
 gaps inner 6
