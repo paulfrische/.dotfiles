@@ -8,3 +8,4 @@ stow -vDt $HOME i3
 stow -vDt $HOME nvim
 stow -vDt $HOME tmux
 stow -vDt $HOME zsh
+stow -vDt $HOME scripts

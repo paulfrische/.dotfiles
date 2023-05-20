@@ -10,3 +10,4 @@ stow -vt $HOME i3
 stow -vt $HOME nvim
 stow -vt $HOME tmux
 stow -vt $HOME zsh
+stow -vt $HOME scripts
