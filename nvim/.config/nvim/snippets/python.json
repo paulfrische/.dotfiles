@@ -1,0 +1,11 @@
+{
+  "dataclass": {
+    "prefix": "dt",
+    "body": [
+      "@dataclass",
+      "class ${1:identifier}:",
+      "\t${2:pass}"
+    ],
+    "description": "Code snippet for a python dataclass"
+  }
+}
