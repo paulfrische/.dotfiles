@@ -1,8 +1,9 @@
 #+TITLE: Paul Frische's emacs config
 #+AUTHOR: Paul Frische
 #+DESCRIPTION: Paul Frische's emacs config
-#+STARTUP: showeverything
+#+STARTUP: hideblocks
 #+OPTIONS: toc:2
+
 * MOST IMPORTANT PACKAGES
 
 ** ELPACA PACKAGE MANAGER
@@ -14,31 +15,31 @@
   (defvar elpaca-builds-directory (expand-file-name "builds/" elpaca-directory))
   (defvar elpaca-repos-directory (expand-file-name "repos/" elpaca-directory))
   (defvar elpaca-order '(elpaca :repo "https://github.com/progfolio/elpaca.git"
-				:ref nil
-				:files (:defaults (:exclude "extensions"))
-				:build (:not elpaca--activate-package)))
+                                :ref nil
+                                :files (:defaults (:exclude "extensions"))
+                                :build (:not elpaca--activate-package)))
   (let* ((repo  (expand-file-name "elpaca/" elpaca-repos-directory))
-	 (build (expand-file-name "elpaca/" elpaca-builds-directory))
-	 (order (cdr elpaca-order))
-	 (default-directory repo))
+         (build (expand-file-name "elpaca/" elpaca-builds-directory))
+         (order (cdr elpaca-order))
+         (default-directory repo))
     (add-to-list 'load-path (if (file-exists-p build) build repo))
     (unless (file-exists-p repo)
       (make-directory repo t)
       (when (< emacs-major-version 28) (require 'subr-x))
       (condition-case-unless-debug err
-	  (if-let ((buffer (pop-to-buffer-same-window "*elpaca-bootstrap*"))
-		   ((zerop (call-process "git" nil buffer t "clone"
-					 (plist-get order :repo) repo)))
-		   ((zerop (call-process "git" nil buffer t "checkout"
-					 (or (plist-get order :ref) "--"))))
-		   (emacs (concat invocation-directory invocation-name))
-		   ((zerop (call-process emacs nil buffer nil "-Q" "-L" "." "--batch"
-					 "--eval" "(byte-recompile-directory \".\" 0 'force)")))
-		   ((require 'elpaca))
-		   ((elpaca-generate-autoloads "elpaca" repo)))
-	      (kill-buffer buffer)
-	    (error "%s" (with-current-buffer buffer (buffer-string))))
-	((error) (warn "%s" err) (delete-directory repo 'recursive))))
+          (if-let ((buffer (pop-to-buffer-same-window "*elpaca-bootstrap*"))
+                   ((zerop (call-process "git" nil buffer t "clone"
+                                         (plist-get order :repo) repo)))
+                   ((zerop (call-process "git" nil buffer t "checkout"
+                                         (or (plist-get order :ref) "--"))))
+                   (emacs (concat invocation-directory invocation-name))
+                   ((zerop (call-process emacs nil buffer nil "-Q" "-L" "." "--batch"
+                                         "--eval" "(byte-recompile-directory \".\" 0 'force)")))
+                   ((require 'elpaca))
+                   ((elpaca-generate-autoloads "elpaca" repo)))
+              (kill-buffer buffer)
+            (error "%s" (with-current-buffer buffer (buffer-string))))
+        ((error) (warn "%s" err) (delete-directory repo 'recursive))))
     (unless (require 'elpaca-autoloads nil t)
       (require 'elpaca)
       (elpaca-generate-autoloads "elpaca" repo)
@@ -61,21 +62,43 @@
 
 ** COLORSCHEME
 #+begin_src emacs-lisp
-(load-theme 'modus-vivendi t)
+  (use-package dracula-theme
+    :config
+    (load-theme 'dracula t))
 #+end_src
 
 ** EVIL MODE
 #+begin_src emacs-lisp
   (use-package evil
-	       :init
-	       (setq evil-want-integration t)
-	       (setq evil-want-keybinding nil)
-	       (evil-mode))
+    :init
+    (setq evil-want-integration t)
+    (setq evil-want-keybinding nil)
+    (evil-mode))
   (use-package evil-collection
-	       :after evil
-	       :ensure t
-	       :config
-	       (evil-collection-init))
+    :after evil
+    :ensure t
+    :config
+    (evil-collection-init))
+#+end_src
+
+** WHICH KEY
+#+begin_src emacs-lisp
+  (use-package which-key
+    :init
+    (which-key-mode)
+    :config
+    (setq which-key-side-window-location 'bottom
+          which-key-sort-order #'which-key-key-order-alpha
+          which-key-sort-uppercase-first nil
+          which-key-add-column-padding 1
+          which-key-max-display-columns nil
+          which-key-min-display-lines 6
+          which-key-side-window-slot -10
+          which-key-side-window-max-height 0.25
+          which-key-idle-delay 0.8
+          which-key-max-description-length 25
+          which-key-allow-imprecise-window-fit t
+          which-key-separator " → " ))
 #+end_src
 
 ** GENERAL KEYBINDS
@@ -86,33 +109,58 @@
 
     ;; set up 'SPC' as the global leader key
     (general-create-definer custom/leader-keys
-			    :states '(normal insert visual emacs)
-			    :keymaps 'override
-			    :prefix "SPC" ;; set leader
-			    :global-prefix "M-SPC") ;; access leader in insert mode
+      :states '(normal insert visual emacs)
+      :keymaps 'override
+      :prefix "SPC" ;; set leader
+      :global-prefix "M-SPC") ;; access leader in insert mode
 
     (custom/leader-keys
-     "f" '(find-file :wk "find files")
-    ))
+      "f" '(find-file :wk "find files")
+      ))
+#+end_src
+
+** ORG MODE
+*** TOC
+#+begin_src emacs-lisp
+  (use-package toc-org
+    :commands toc-org-enable
+    :init (add-hook 'org-mode-hook 'toc-org-enable))
+#+end_src
+
+*** ORG BULLETS
+Show bullets instead of asterisks.
+#+begin_src emacs-lisp
+  (add-hook 'org-mode-hook 'org-indent-mode)
+  (use-package org-bullets)
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+#+end_src
+
+** MPDEL
+MPDEL is a mpd client.
+#+begin_src emacs-lisp
+  (use-package mpdel
+    :config
+    (require 'mpdel)
+    (mpdel-mode))
 #+end_src
 
 * OPTIONS
 
 ** DISABLE STARTUP SCREEN
 #+begin_src emacs-lisp
-(setq inhibit-startup-message t) ; disable  startup screen
+  (setq inhibit-startup-message t) ; disable  startup screen
 #+end_src
 
 ** DISABLE GUI ELEMENTS
 #+begin_src emacs-lisp
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+  (menu-bar-mode -1)
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1)
 #+end_src
 
 ** LINE NUMBERS
 #+begin_src emacs-lisp
-(global-display-line-numbers-mode 1)
+  (global-display-line-numbers-mode 1)
 #+end_src
 
 ** SCROLLING
@@ -126,23 +174,35 @@ Make scrolling *smooth*
   (setq scroll-conservatively 1)
 #+end_src
 
+** IDO MODE
+ido-mode enables better interactive file finding etc.
+#+begin_src emacs-lisp
+  (require 'ido)
+  (ido-mode t)
+#+end_src
+
 ** FONTS
 #+begin_src emacs-lisp
   (set-face-attribute 'default nil
-		      :font "JetBrains Mono Nerd Font"
-		      :height 110
-		      :weight 'medium)
+                      :font "JetBrains Mono Nerd Font"
+                      :height 110
+                      :weight 'medium)
   (set-face-attribute 'fixed-pitch nil
-		      :font "JetBrains Mono Nerd Font"
-		      :height 110
-		      :weight 'medium)
+                      :font "JetBrains Mono Nerd Font"
+                      :height 110
+                      :weight 'medium)
   ;; Makes commented text and keywords italics.
   ;; This is working in emacsclient but not emacs.
   ;; Your font must have an italic face available.
   (set-face-attribute 'font-lock-comment-face nil
-		      :slant 'italic)
+                      :slant 'italic)
   (set-face-attribute 'font-lock-keyword-face nil
-		      :slant 'italic)
+                      :slant 'italic)
+#+end_src
+
+** STARTUP PAGE
+#+begin_src emacs-lisp
+  (setq initial-buffer-choice "~/.config/emacs/start.org")
 #+end_src
 
 * CLEANUP

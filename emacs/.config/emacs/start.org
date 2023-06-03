@@ -1,0 +1,2 @@
+* WELCOME
+Open any file with SPC-f.
