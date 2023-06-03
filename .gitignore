@@ -1,1 +1,4 @@
 tmux/.config/tmux/plugins
+emacs/.config/emacs/*
+!emacs/.config/emacs/init.el
+!emacs/.config/emacs/config.org

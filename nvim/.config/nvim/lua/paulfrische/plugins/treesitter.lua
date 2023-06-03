@@ -18,7 +18,7 @@ return {
       },
 
       indent = {
-        enable = false,
+        enable = true,
       },
 
       playground = {
