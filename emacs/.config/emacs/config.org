@@ -1,0 +1,151 @@
+#+TITLE: Paul Frische's emacs config
+#+AUTHOR: Paul Frische
+#+DESCRIPTION: Paul Frische's emacs config
+#+STARTUP: showeverything
+#+OPTIONS: toc:2
+* MOST IMPORTANT PACKAGES
+
+** ELPACA PACKAGE MANAGER
+
+*** Install the base package manager.
+#+begin_src emacs-lisp
+  (defvar elpaca-installer-version 0.4)
+  (defvar elpaca-directory (expand-file-name "elpaca/" user-emacs-directory))
+  (defvar elpaca-builds-directory (expand-file-name "builds/" elpaca-directory))
+  (defvar elpaca-repos-directory (expand-file-name "repos/" elpaca-directory))
+  (defvar elpaca-order '(elpaca :repo "https://github.com/progfolio/elpaca.git"
+				:ref nil
+				:files (:defaults (:exclude "extensions"))
+				:build (:not elpaca--activate-package)))
+  (let* ((repo  (expand-file-name "elpaca/" elpaca-repos-directory))
+	 (build (expand-file-name "elpaca/" elpaca-builds-directory))
+	 (order (cdr elpaca-order))
+	 (default-directory repo))
+    (add-to-list 'load-path (if (file-exists-p build) build repo))
+    (unless (file-exists-p repo)
+      (make-directory repo t)
+      (when (< emacs-major-version 28) (require 'subr-x))
+      (condition-case-unless-debug err
+	  (if-let ((buffer (pop-to-buffer-same-window "*elpaca-bootstrap*"))
+		   ((zerop (call-process "git" nil buffer t "clone"
+					 (plist-get order :repo) repo)))
+		   ((zerop (call-process "git" nil buffer t "checkout"
+					 (or (plist-get order :ref) "--"))))
+		   (emacs (concat invocation-directory invocation-name))
+		   ((zerop (call-process emacs nil buffer nil "-Q" "-L" "." "--batch"
+					 "--eval" "(byte-recompile-directory \".\" 0 'force)")))
+		   ((require 'elpaca))
+		   ((elpaca-generate-autoloads "elpaca" repo)))
+	      (kill-buffer buffer)
+	    (error "%s" (with-current-buffer buffer (buffer-string))))
+	((error) (warn "%s" err) (delete-directory repo 'recursive))))
+    (unless (require 'elpaca-autoloads nil t)
+      (require 'elpaca)
+      (elpaca-generate-autoloads "elpaca" repo)
+      (load "./elpaca-autoloads")))
+  (add-hook 'after-init-hook #'elpaca-process-queues)
+  (elpaca `(,@elpaca-order))
+
+#+end_src
+
+*** Install use-package support
+#+begin_src emacs-lisp
+  (elpaca elpaca-use-package
+    ;; Enable :elpaca use-package keyword.
+    (elpaca-use-package-mode)
+    ;; Assume :elpaca t unless otherwise specified.
+    (setq elpaca-use-package-by-default t))
+  ;; Block until current queue processed.
+  (elpaca-wait)
+#+end_src
+
+** COLORSCHEME
+#+begin_src emacs-lisp
+(load-theme 'modus-vivendi t)
+#+end_src
+
+** EVIL MODE
+#+begin_src emacs-lisp
+  (use-package evil
+	       :init
+	       (setq evil-want-integration t)
+	       (setq evil-want-keybinding nil)
+	       (evil-mode))
+  (use-package evil-collection
+	       :after evil
+	       :ensure t
+	       :config
+	       (evil-collection-init))
+#+end_src
+
+** GENERAL KEYBINDS
+#+begin_src emacs-lisp
+  (use-package general
+    :config
+    (general-evil-setup)
+
+    ;; set up 'SPC' as the global leader key
+    (general-create-definer custom/leader-keys
+			    :states '(normal insert visual emacs)
+			    :keymaps 'override
+			    :prefix "SPC" ;; set leader
+			    :global-prefix "M-SPC") ;; access leader in insert mode
+
+    (custom/leader-keys
+     "f" '(find-file :wk "find files")
+    ))
+#+end_src
+
+* OPTIONS
+
+** DISABLE STARTUP SCREEN
+#+begin_src emacs-lisp
+(setq inhibit-startup-message t) ; disable  startup screen
+#+end_src
+
+** DISABLE GUI ELEMENTS
+#+begin_src emacs-lisp
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+#+end_src
+
+** LINE NUMBERS
+#+begin_src emacs-lisp
+(global-display-line-numbers-mode 1)
+#+end_src
+
+** SCROLLING
+#+begin_src emacs-lisp
+  (setq scroll-margin 8)
+#+end_src
+Make scrolling *smooth*
+#+begin_src emacs-lisp
+  (setq scroll-down-aggressively nil)
+  (setq scroll-up-aggressively nil)
+  (setq scroll-conservatively 1)
+#+end_src
+
+** FONTS
+#+begin_src emacs-lisp
+  (set-face-attribute 'default nil
+		      :font "JetBrains Mono Nerd Font"
+		      :height 110
+		      :weight 'medium)
+  (set-face-attribute 'fixed-pitch nil
+		      :font "JetBrains Mono Nerd Font"
+		      :height 110
+		      :weight 'medium)
+  ;; Makes commented text and keywords italics.
+  ;; This is working in emacsclient but not emacs.
+  ;; Your font must have an italic face available.
+  (set-face-attribute 'font-lock-comment-face nil
+		      :slant 'italic)
+  (set-face-attribute 'font-lock-keyword-face nil
+		      :slant 'italic)
+#+end_src
+
+* CLEANUP
+#+begin_src emacs-lisp
+  (use-package emacs :elpaca nil :config (setq ring-bell-function #'ignore))
+#+end_src
