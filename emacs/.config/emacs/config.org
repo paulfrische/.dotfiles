@@ -148,7 +148,15 @@ MPDEL is a mpd client.
 
 ** DISABLE STARTUP SCREEN
 #+begin_src emacs-lisp
-  (setq inhibit-startup-message t) ; disable  startup screen
+    (setq inhibit-startup-message t) ; disable  startup screen
+
+  (define-minor-mode start-mode
+    "Provide functions for custom start page."
+    :lighter " start"
+    :keymap ())
+
+  (add-hook 'start-mode-hook 'read-only-mode) ;; make start.org read-only; use 'SPC t r' to toggle off read-only.
+  (provide 'start-mode)
 #+end_src
 
 ** DISABLE GUI ELEMENTS

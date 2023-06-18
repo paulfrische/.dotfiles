@@ -68,7 +68,7 @@ M.setup = function()
     ensure_installed = {
       'rust_analyzer',
       'lua_ls',
-      'pylsp',
+      'pyright'
     },
   })
 
@@ -97,21 +97,6 @@ M.setup = function()
       ['rust-analyzer'] = {
         cargo = {
           allFeatures = true,
-        }
-      }
-    }
-  })
-
-  local python = string.gsub(vim.fn.system('which python3'), '\n', '')
-
-  lspconfig.pylsp.setup({
-    on_attach = M.attach,
-    settings = {
-      pylsp = {
-        plugins = {
-          jedi = {
-            environment = python,
-          }
         }
       }
     }
