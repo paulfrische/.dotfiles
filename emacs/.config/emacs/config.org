@@ -62,9 +62,7 @@
 
 ** COLORSCHEME
 #+begin_src emacs-lisp
-  (use-package dracula-theme
-    :config
-    (load-theme 'dracula t))
+  (load-theme 'wombat t)
 #+end_src
 
 ** EVIL MODE
@@ -149,14 +147,6 @@ MPDEL is a mpd client.
 ** DISABLE STARTUP SCREEN
 #+begin_src emacs-lisp
     (setq inhibit-startup-message t) ; disable  startup screen
-
-  (define-minor-mode start-mode
-    "Provide functions for custom start page."
-    :lighter " start"
-    :keymap ())
-
-  (add-hook 'start-mode-hook 'read-only-mode) ;; make start.org read-only; use 'SPC t r' to toggle off read-only.
-  (provide 'start-mode)
 #+end_src
 
 ** DISABLE GUI ELEMENTS
@@ -206,11 +196,6 @@ ido-mode enables better interactive file finding etc.
                       :slant 'italic)
   (set-face-attribute 'font-lock-keyword-face nil
                       :slant 'italic)
-#+end_src
-
-** STARTUP PAGE
-#+begin_src emacs-lisp
-  (setq initial-buffer-choice "~/.config/emacs/start.org")
 #+end_src
 
 * CLEANUP
