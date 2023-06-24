@@ -7,17 +7,17 @@ bar {
         status_command i3status
         position top
 
-        colors {
-            background #1f2335
-            statusline #c0caf5
-            separator #bb9af7
-
-            focused_workspace  #7aa2f7 #7aa2f7 #24283b
-            active_workspace   #7aa2f7 #7aa2f7 #24283b
-            inactive_workspace #3d59a1 #3d59a1 #1f2335
-            urgent_workspace   #1abc9c #1abc9c #1f2335
-            binding_mode       #2f343a #900000 #ffffff
-        }
+        # colors {
+        #     background #1f2335
+        #     statusline #c0caf5
+        #     separator #bb9af7
+        #
+        #     focused_workspace  #7aa2f7 #7aa2f7 #24283b
+        #     active_workspace   #7aa2f7 #7aa2f7 #24283b
+        #     inactive_workspace #3d59a1 #3d59a1 #1f2335
+        #     urgent_workspace   #1abc9c #1abc9c #1f2335
+        #     binding_mode       #2f343a #900000 #ffffff
+        # }
 }
 
 set $mod Mod4
