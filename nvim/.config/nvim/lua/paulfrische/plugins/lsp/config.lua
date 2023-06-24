@@ -1,9 +1,16 @@
 local M = {}
 
-M.attach = function(client, buffnr)
-  require('lsp-inlayhints').on_attach(client, buffnr)
+M._hints = false
 
+M.toggle_inlay_hints = function ()
+  M._hints = not M._hints
+  vim.lsp.buf.inlay_hint(0, M._hints)
+end
+
+M.attach = function(client, buffnr)
   local bufmap = require('paulfrische.util').bufmap
+
+  bufmap('n', '<leader>i', M.toggle_inlay_hints)
 
   -- Displays hover information about the symbol under the cursor
   bufmap('n', 'K', vim.lsp.buf.hover)
