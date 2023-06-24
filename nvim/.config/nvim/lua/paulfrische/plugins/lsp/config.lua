@@ -2,7 +2,7 @@ local M = {}
 
 M._hints = false
 
-M.toggle_inlay_hints = function ()
+M.toggle_inlay_hints = function()
   M._hints = not M._hints
   vim.lsp.buf.inlay_hint(0, M._hints)
 end
@@ -75,7 +75,7 @@ M.setup = function()
     ensure_installed = {
       'rust_analyzer',
       'lua_ls',
-      'pyright'
+      'pylsp'
     },
   })
 
@@ -104,6 +104,21 @@ M.setup = function()
       ['rust-analyzer'] = {
         cargo = {
           allFeatures = true,
+        }
+      }
+    }
+  })
+
+  local python = string.gsub(vim.fn.system('which python3'), '\n', '')
+
+  lspconfig.pylsp.setup({
+    on_attach = M.attach,
+    settings = {
+      pylsp = {
+        plugins = {
+          jedi = {
+            environment = python,
+          }
         }
       }
     }
