@@ -97,6 +97,17 @@ M.setup = function()
     end,
   })
 
+  -- fix lua_ls
+  lspconfig.lua_ls.setup({
+    settings = {
+      Lua = {
+        telemetry = {
+          enable = false
+        }
+      }
+    }
+  })
+
   -- fix autocomplete etc. for extern libraries
   lspconfig.rust_analyzer.setup({
     on_attach = M.attach,

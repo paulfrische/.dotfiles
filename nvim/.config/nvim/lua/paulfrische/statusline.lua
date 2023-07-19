@@ -1,7 +1,11 @@
+if true then
+  return
+end
+
 local M = {}
 local st = ''
 
-M.max_bufs = 3
+M.max_bufs = 5
 
 M.mode = function()
   local currentmode = {
