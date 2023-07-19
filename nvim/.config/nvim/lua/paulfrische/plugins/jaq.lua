@@ -12,7 +12,7 @@ return {
           python = 'python3 $filePath',
           c = 'make run',
           cpp = 'make run',
-          rust = 'cargo run',
+          rust = 'cargo run -q',
         },
       },
     })
