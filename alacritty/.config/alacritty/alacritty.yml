@@ -77,4 +77,4 @@ schemes:
       cyan: "#3ddbd9"
       white: "#ffffff"   
 
-colors: *oxocarbon
+colors: *tokyonight
