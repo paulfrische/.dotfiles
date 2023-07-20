@@ -20,10 +20,39 @@ font:
   bold_italic:
     family:  JetBrains Mono Nerd Font
     style: Bold Italic
-  size: 12.0
+  size: 10.0
 
 schemes:
-  codedark: &tokyonight
+  codedark: &codedark
+    primary:
+      background: '#1e1e1e'
+      foreground: '#d4d4d4'
+
+    cursor:
+      text: '#d4d4d4'
+      cursor: '#d4d4d4'
+
+    normal:
+      black:   '#1e1e1e'
+      red:     '#f44747'
+      green:   '#608b4e'
+      yellow:  '#dcdcaa'
+      blue:    '#569cd6'
+      magenta: '#c678dd'
+      cyan:    '#56b6c2'
+      white:   '#d4d4d4'
+
+    bright:
+      black:   '#545454'
+      red:     '#f44747'
+      green:   '#608b4e'
+      yellow:  '#dcdcaa'
+      blue:    '#569cd6'
+      magenta: '#c678dd'
+      cyan:    '#56b6c2'
+      white:   '#d4d4d4'
+
+  tokyonight: &tokyonight
     primary:
       background: '#1a1b26'
       foreground: '#c0caf5'
@@ -77,4 +106,4 @@ schemes:
       cyan: "#3ddbd9"
       white: "#ffffff"   
 
-colors: *tokyonight
+colors: *codedark

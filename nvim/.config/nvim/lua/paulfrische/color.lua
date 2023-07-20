@@ -1,11 +1,12 @@
 local M = {}
 
 local theme = {
-  TOKYONIGHT = 'tokyonight',
+  CODEDARK = 'codedark',
   GRUVBOX = 'gruvbox',
   OXOCARBON = 'oxocarbon',
+  TOKYONIGHT = 'tokyonight',
 }
 
-M.theme = theme.TOKYONIGHT
+M.theme = theme.CODEDARK
 
 return M
