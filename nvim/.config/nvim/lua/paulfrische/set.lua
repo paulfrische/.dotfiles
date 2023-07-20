@@ -18,7 +18,7 @@ vim.opt.title = true
 -- vim.opt.fillchars:append('eob: ')
 vim.opt.undofile = true
 vim.opt.colorcolumn = '80'
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.updatetime = 1000
 vim.opt.swapfile = false
 vim.opt.signcolumn = "yes"
