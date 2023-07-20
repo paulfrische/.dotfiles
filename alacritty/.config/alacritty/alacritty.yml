@@ -47,7 +47,7 @@ schemes:
       magenta: '#bb9af7'
       cyan:    '#7dcfff'
       white:   '#c0caf5'
-  oxycarbon: &oxycarbon
+  oxocarbon: &oxocarbon
     primary:
       background: "#161616"
       foreground: "#ffffff"
@@ -77,4 +77,4 @@ schemes:
       cyan: "#3ddbd9"
       white: "#ffffff"   
 
-colors: *oxycarbon
+colors: *oxocarbon
