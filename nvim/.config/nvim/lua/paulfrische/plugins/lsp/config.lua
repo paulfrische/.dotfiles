@@ -1,10 +1,8 @@
 local M = {}
 
-M._hints = false
 
 M.toggle_inlay_hints = function()
-  M._hints = not M._hints
-  vim.lsp.buf.inlay_hint(0, M._hints)
+  vim.lsp.inlay_hint(0, nil)
 end
 
 ---@diagnostic disable-next-line: unused-local
@@ -98,8 +96,15 @@ M.setup = function()
     on_attach = M.attach,
     settings = {
       Lua = {
+        workspace = {
+          checkThirdParty = false,
+        },
         completion = {
           callSnippet = 'Replace'
+        },
+        hint = {
+          enable = true,
+          arrayIndex = "Enable",
         },
         telemetry = {
           enable = false

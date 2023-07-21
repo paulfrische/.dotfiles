@@ -20,3 +20,11 @@ vim.api.nvim_create_autocmd('BufEnter', {
   group = custom,
   command = 'set formatoptions-=cro',
 })
+
+-- toggle inlay hints
+vim.api.nvim_create_autocmd('BufEnter', {
+  group = custom,
+  callback = function ()
+    vim.lsp.inlay_hint(0, true)
+  end
+})
