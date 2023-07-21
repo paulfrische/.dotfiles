@@ -46,6 +46,3 @@ map('n', '<leader>v', '<cmd>vsplit<CR>')
 -- buffers
 map('n', '<M-n>', '<cmd>bnext<CR>')
 map('n', '<M-p>', '<cmd>bprevious<CR>')
-
--- add current dir to rtp
-map('n', '<leader>r', ':set rtp+=.<CR>')

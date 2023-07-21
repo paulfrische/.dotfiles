@@ -1,6 +1,6 @@
 return {
   'norcalli/nvim-colorizer.lua',
-  event = 'VimEnter',
+  event = 'VeryLazy',
   config = function()
     require('colorizer').setup({
       '*',

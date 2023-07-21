@@ -74,15 +74,13 @@ return {
     if not ok then
       print(err)
     end
-    telescope.load_extension('projects')
-    
+
     local map = require('paulfrische.util').map
 
     map('n', '<leader>f', builtin.find_files)
     map('n', '<leader>b', builtin.buffers)
     map('n', '<leader>ds', builtin.lsp_document_symbols)
     map('n', '<leader>ws', builtin.lsp_dynamic_workspace_symbols)
-    map('n', '<leader>p', telescope.extensions.projects.projects)
     map('n', '<leader>gb', builtin.git_branches)
     map('n', '<leader>s', function()
       builtin.grep_string({ search = vim.fn.input('Grep > ') })

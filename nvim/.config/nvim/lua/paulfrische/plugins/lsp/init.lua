@@ -2,6 +2,7 @@ return {
   -- LSP Support
   'neovim/nvim-lspconfig',
 
+  event = 'VeryLazy',
   config = require('paulfrische.plugins.lsp.config').setup,
 
   dependencies = {

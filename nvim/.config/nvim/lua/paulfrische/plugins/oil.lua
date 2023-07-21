@@ -1,4 +1,5 @@
 return {
+  cmd = 'Oil',
   'stevearc/oil.nvim',
   opts = {},
   dependencies = {
