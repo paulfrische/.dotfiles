@@ -1,9 +1,7 @@
 return {
-  enabled = false,
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
     { 'nvim-treesitter/playground' },
-    { 'nvim-treesitter/nvim-treesitter-textobjects' },
     { 'mrjones2014/nvim-ts-rainbow' },
     { 'nvim-treesitter/nvim-treesitter-context' },
   },
@@ -30,37 +28,6 @@ return {
         enable = true,
         extended_mode = true,
         max_file_lines = nil,
-      },
-
-      textobjects = {
-        select = {
-          enable = true,
-          lookahead = true,
-          keymaps = {
-            ['af'] = {
-              query = '@function.outer',
-              desc = 'Select function head and body',
-            },
-            ['if'] = {
-              query = '@function.inner',
-              desc = 'Select function body',
-            },
-            ['ac'] = {
-              query = '@class.inner',
-              desc = 'Select class head and body',
-            },
-            ['ic'] = { query = '@class.inner', desc = 'Select class body' },
-          },
-        },
-      },
-
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = '<CR>', -- set to `false` to disable one of the mappings
-          node_incremental = '<CR>',
-          scope_incremental = '<CR>',
-        },
       },
     })
 

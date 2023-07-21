@@ -7,6 +7,7 @@ M.toggle_inlay_hints = function()
   vim.lsp.buf.inlay_hint(0, M._hints)
 end
 
+---@diagnostic disable-next-line: unused-local
 M.attach = function(client, buffnr)
   local bufmap = require('paulfrische.util').bufmap
 
@@ -57,19 +58,14 @@ M.attach = function(client, buffnr)
 end
 
 M.setup = function()
+  require('neodev').setup({})
+
   require('paulfrische.plugins.lsp.cmp').setup({
     border = '',
   })
 
   require('mason').setup()
   require('mason-lspconfig').setup()
-
-  require('neodev').setup({
-    library = {
-      plugins = { 'nvim-dap-ui' },
-      types = true,
-    },
-  })
 
   require('mason-lspconfig').setup({
     ensure_installed = {
@@ -99,8 +95,12 @@ M.setup = function()
 
   -- fix lua_ls
   lspconfig.lua_ls.setup({
+    on_attach = M.attach,
     settings = {
       Lua = {
+        completion = {
+          callSnippet = 'Replace'
+        },
         telemetry = {
           enable = false
         }
