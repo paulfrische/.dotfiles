@@ -32,8 +32,8 @@ M.words_in_buffer = function()
   return words
 end
 
-M.map = function (mode, lhs, rhs, opt)
-  vim.keymap.set(mode, lhs, rhs, opt)
+M.map = function (mode, lhs, rhs, desc)
+  vim.keymap.set(mode, lhs, rhs, { desc = desc})
 end
 
 M.bufmap = function(mode, lhs, rhs)
