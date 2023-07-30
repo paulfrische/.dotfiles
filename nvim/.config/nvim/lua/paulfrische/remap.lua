@@ -3,6 +3,9 @@ local map = require('paulfrische.util').map
 -- exit without typing q
 map('n', '<leader>e', '<cmd>q<cr>', 'exit without typing q')
 
+-- compiling
+map('n', '<leader>c', require('paulfrische.compile').compile, 'compile code')
+
 -- put the cursor in the center of the screen when searching/jumping around
 map('n', '<C-d>', '<C-d>zz', 'jump down half a page')
 map('n', '<C-u>', '<C-u>zz', 'jump up half a page')
@@ -17,7 +20,7 @@ map('v', 'P', '"_dp')
 map('n', '<ESC>', ':noh<CR>:echo<CR>', 'hide search highlight stuff')
 
 -- code runner
-map('n', '<leader>c', ':Jaq<CR>', 'run code in jaq')
+-- map('n', '<leader>c', ':Jaq<CR>', 'run code in jaq')
 
 -- terminal
 map('n', '<leader>t', ':ToggleTerm direction=float<CR>', 'open floating terminal')

@@ -1,6 +1,7 @@
 return {
   'is0n/jaq-nvim',
   cmd = 'Jaq',
+  enabled = false,
   config = function()
     require('jaq-nvim').setup({
       cmds = {
