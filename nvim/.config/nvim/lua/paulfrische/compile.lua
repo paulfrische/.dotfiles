@@ -8,15 +8,22 @@ local function check(id)
 end
 
 M.compile = function()
-  local saved = vim.g.COMPILE_COMMAND or ''
-  local command = check(vim.fn.input({ prompt = 'compile command: ', default = saved, cancelreturn = false }))
+  local saved = vim.g.COMPILE_COMMANDS_CUSTOM
+  if saved == '' then
+    saved = '{}'
+  end
+  local saved_table = vim.json.decode(saved)
+  local command = saved_table[vim.fn.getcwd(0)] or ''
+
+  command = check(vim.fn.input({ prompt = 'compile command: ', default = command, cancelreturn = false }))
 
   if not command then
     print('compiling aborted')
     return
+  else
+    saved_table[vim.fn.getcwd(0)] = command
+    vim.g.COMPILE_COMMANDS_CUSTOM = vim.json.encode(saved_table)
   end
-
-  vim.g.COMPILE_COMMAND = command
 
   local width = vim.api.nvim_win_get_width(0)
   local height = vim.api.nvim_win_get_height(0)
