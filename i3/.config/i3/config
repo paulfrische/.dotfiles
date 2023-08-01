@@ -1,11 +1,11 @@
 # class                 border  backgr. text    indicator child_border
-client.focused          #7aa2f7 #7aa2f7 #24283b #0db9d7   #0db9d7
-client.focused_inactive #3d59a1 #3d59a1 #1f2335 #2ac3de   #2ac3de
-client.unfocused        #3d59a1 #3d59a1 #1f2335 #2ac3de   #2ac3de
+# client.focused          #7aa2f7 #7aa2f7 #24283b #0db9d7   #0db9d7
+# client.focused_inactive #3d59a1 #3d59a1 #1f2335 #2ac3de   #2ac3de
+# client.unfocused        #3d59a1 #3d59a1 #1f2335 #2ac3de   #2ac3de
 
 bar {
         status_command i3status
-        position top
+        position bottom
 
         # colors {
         #     background #1f2335
@@ -133,6 +133,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-for_window [class=".*"] border pixel 1
+# for_window [class=".*"] border pixel 1
 
-gaps inner 6
+# gaps inner 6

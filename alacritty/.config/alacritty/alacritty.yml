@@ -9,20 +9,48 @@ window:
   dynamic_title: true
 font:
   normal:
-    family:  Hack Nerd Font Mono
+    family:  JetBrains Mono Nerd Font Mono
     style: Regular
   bold:
-    family:  Hack Nerd Font Mono
+    family:  JetBrains Mono Nerd Font Mono
     style: Bold
   italic:
-    family:  Hack Nerd Font Mono
+    family:  JetBrains Mono Nerd Font Mono
     style: Italic
   bold_italic:
-    family:  Hack Nerd Font Mono
+    family:  JetBrains Mono Nerd Font Mono
     style: Bold Italic
   size: 11.0
 
 schemes:
+  github: &github
+    primary:
+      background: '#0a0c10'
+      foreground: '#f0f3f6'
+
+    cursor:
+      text:   '#d9dee3'
+      cursor: '#d9dee3'
+
+    normal:
+      black:   '#0a0c10'
+      red:     '#ff9492'
+      green:   '#26cd4d'
+      yellow:  '#f0b72f'
+      blue:    '#71b7ff'
+      magenta: '#cb9eff'
+      cyan:    '#76e3ea'
+      white:   '#f0f3f6'
+
+    bright:
+      black:   '#272b33'
+      red:     '#ffb1af'
+      green:   '#4ae168'
+      yellow:  '#f7c843'
+      blue:    '#91cbff'
+      magenta: '#dbb7ff'
+      cyan:    '#b3f0ff'
+      white:   '#f0f3f6'
   codedark: &codedark
     primary:
       background: '#1e1e1e'
@@ -106,4 +134,4 @@ schemes:
       cyan: "#3ddbd9"
       white: "#ffffff"   
 
-colors: *codedark
+colors: *github

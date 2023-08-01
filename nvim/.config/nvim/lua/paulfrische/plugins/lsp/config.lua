@@ -104,7 +104,7 @@ M.setup = function()
         },
         hint = {
           enable = true,
-          arrayIndex = "Auto",
+          arrayIndex = "Disable",
         },
         telemetry = {
           enable = false

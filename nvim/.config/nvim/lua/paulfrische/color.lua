@@ -5,8 +5,9 @@ local theme = {
   GRUVBOX = 'gruvbox',
   OXOCARBON = 'oxocarbon',
   TOKYONIGHT = 'tokyonight',
+  GITHUB = 'github',
 }
 
-M.theme = theme.CODEDARK
+M.theme = theme.GITHUB
 
 return M

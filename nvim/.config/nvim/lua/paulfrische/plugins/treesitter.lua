@@ -8,7 +8,7 @@ return {
   config = function()
     require('nvim-treesitter.configs').setup({
       ensure_installed = { 'lua', 'rust', 'python', 'html', 'css', 'comment' },
-      sync_install = false,
+      sync_install = true,
       auto_install = true,
 
       highlight = {
@@ -25,7 +25,7 @@ return {
       },
 
       rainbow = {
-        enable = true,
+        enable = false,
         extended_mode = true,
         max_file_lines = nil,
       },
