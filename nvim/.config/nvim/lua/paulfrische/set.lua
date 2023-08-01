@@ -13,9 +13,10 @@ vim.opt.number = true
 vim.opt.numberwidth = 4
 vim.opt.scrolloff = 8
 vim.opt.title = true
--- vim.opt.list = true
--- vim.opt.listchars:append('trail:·')
--- vim.opt.fillchars:append('eob: ')
+vim.opt.list = true
+vim.opt.listchars:append('trail:·')
+vim.opt.fillchars:append('eob: ')
+vim.opt.listchars:append("eol:↴")
 vim.opt.undofile = true
 vim.opt.colorcolumn = '80'
 vim.opt.cursorline = false
