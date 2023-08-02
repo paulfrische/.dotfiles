@@ -32,9 +32,6 @@ map('n', '<leader>g', ':LazyGit<CR>', 'open LazyGit')
 map('v', '<C-j>', ':m \'>+1<CR>gv=gv')
 map('v', '<C-k>', ':m \'<-2<CR>gv=gv')
 
--- file explorer
-map('n', '<leader>x', ':NvimTreeToggle<CR>', 'open file tree')
-
 -- no neck pain
 map('n', '<leader>z', ':ZenMode<CR>', 'toggle ZenMode')
 

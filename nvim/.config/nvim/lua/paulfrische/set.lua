@@ -24,5 +24,6 @@ vim.opt.updatetime = 1000
 vim.opt.swapfile = false
 vim.opt.signcolumn = "yes"
 
--- alias :Q to :qa!
+-- alias :Q to :qa! and :W to :w
 vim.api.nvim_create_user_command('Q', 'qa!', {})
+vim.api.nvim_create_user_command('W', 'w', {})

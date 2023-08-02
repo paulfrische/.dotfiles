@@ -5,15 +5,14 @@ return {
       'nvim-telescope/telescope-fzf-native.nvim',
       build = 'make',
     },
+    'nvim-telescope/telescope-file-browser.nvim'
   },
   keys = {
     '<leader>f',
+    '<leader>x',
     '<leader>ds',
     '<leader>ws',
-    '<leader>p',
-    '<leader>gb',
     '<leader>s',
-    '<leader>b',
   },
   cmd = { 'Telescope', 'TH' },
   config = function()
@@ -24,6 +23,9 @@ return {
       extensions = {
         fzf = {
           override_generic_sorter = true,
+        },
+        file_browser = {
+
         },
       },
       defaults = {
@@ -53,13 +55,14 @@ return {
       print(err)
     end
 
+    telescope.load_extension('file_browser')
+
     local map = require('paulfrische.util').map
 
     map('n', '<leader>f', builtin.find_files)
-    map('n', '<leader>b', builtin.buffers)
+    map('n', '<leader>x', telescope.extensions.file_browser.file_browser)
     map('n', '<leader>ds', builtin.lsp_document_symbols)
     map('n', '<leader>ws', builtin.lsp_dynamic_workspace_symbols)
-    map('n', '<leader>gb', builtin.git_branches)
     map('n', '<leader>s', function()
       builtin.grep_string({ search = vim.fn.input('Grep > ') })
     end)
