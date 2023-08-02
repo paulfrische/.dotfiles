@@ -20,7 +20,7 @@ vim.opt.listchars:append("eol:↴")
 vim.opt.undofile = true
 vim.opt.colorcolumn = '80'
 vim.opt.cursorline = false
-vim.opt.updatetime = 1000
+vim.opt.updatetime = 300
 vim.opt.swapfile = false
 vim.opt.signcolumn = "yes"
 
