@@ -23,6 +23,7 @@ vim.opt.cursorline = false
 vim.opt.updatetime = 300
 vim.opt.swapfile = false
 vim.opt.signcolumn = "yes"
+vim.opt.hlsearch = true
 
 -- alias :Q to :qa! and :W to :w
 vim.api.nvim_create_user_command('Q', 'qa!', {})
