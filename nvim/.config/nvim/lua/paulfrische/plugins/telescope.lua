@@ -35,7 +35,9 @@ return {
           results = { "─", "│", "─", "│", "├", "┤", "┘", "└" },
           preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
         },
+
         prompt_prefix = ' 🔎 ',
+        selection_caret = '➡️ ',
 
         file_ignore_patterns = {
           '__pycache__/',
