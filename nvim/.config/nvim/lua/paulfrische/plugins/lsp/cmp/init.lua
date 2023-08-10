@@ -2,7 +2,7 @@ local M = {}
 
 M.sources = {
   { name = 'nvim_lsp', priority = 1000 },
-  { name = 'luasnip', keyword_length = 2 },
+  { name = 'luasnip',  keyword_length = 2 },
   { name = 'emoji' },
   { name = 'path' },
 }
@@ -80,6 +80,10 @@ M.setup = function(options)
           cmp.complete()
         end
       end,
+    },
+
+    experimental = {
+      ghost_text = true,
     },
   })
 end
