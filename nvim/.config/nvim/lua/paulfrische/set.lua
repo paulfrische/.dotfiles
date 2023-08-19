@@ -22,7 +22,7 @@ vim.opt.colorcolumn = '80'
 vim.opt.cursorline = false
 vim.opt.updatetime = 300
 vim.opt.swapfile = false
-vim.opt.signcolumn = "yes"
+-- vim.opt.signcolumn = "yes:2"
 vim.opt.hlsearch = true
 
 -- alias :Q to :qa! and :W to :w

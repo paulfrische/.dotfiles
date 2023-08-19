@@ -48,7 +48,8 @@ bindsym $mod+shift+s exec flameshot gui
 
 bindsym $mod+w kill
 
-bindsym $mod+d exec --no-startup-id dmenu_run
+# bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id launchme -c ~/.launchme.ron
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -77,6 +78,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
+bindsym $mod+t layout tabbed
 
 
 set $ws1 "1"

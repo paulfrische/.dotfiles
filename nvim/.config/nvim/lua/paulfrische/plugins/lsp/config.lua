@@ -21,13 +21,13 @@ M.attach = function(client, buffnr)
   bufmap('n', 'gD', vim.lsp.buf.declaration)
 
   -- Lists all the implementations for the symbol under the cursor
-  bufmap('n', 'gi', vim.lsp.buf.implementation)
+  bufmap('n', 'gi',   '<cmd>Trouble lsp_implementations<cr>')
 
   -- Jumps to the definition of the type symbol
-  bufmap('n', 'go', vim.lsp.buf.type_definition)
+  bufmap('n', 'go',  '<cmd>Trouble lsp_definitions<cr>')
 
   -- Lists all the references
-  bufmap('n', 'gr', vim.lsp.buf.references)
+  bufmap('n', 'gr', '<cmd>Trouble lsp_references<cr>')
 
   -- Displays a function's signature information
   bufmap('n', 'gs', vim.lsp.buf.signature_help)

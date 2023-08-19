@@ -10,6 +10,6 @@ return {
       },
     })
 
-    vim.cmd('ZenMode')
+    -- vim.cmd('ZenMode')
   end,
 }
