@@ -8,6 +8,6 @@ local theme = {
   GITHUB = 'github',
 }
 
-M.theme = theme.GRUVBOX
+M.theme = theme.TOKYONIGHT
 
 return M
