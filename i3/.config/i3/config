@@ -22,7 +22,7 @@ bar {
 
 set $mod Mod4
 
-font pango:Iosevka Nerd Font 10
+font pango:JetBrains Mono Nerd Font 8
 
 exec_always /home/paul/.config/i3/start.sh
 

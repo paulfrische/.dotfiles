@@ -10,7 +10,7 @@ vim.opt.wrap = false
 vim.opt.cmdheight = 0
 vim.opt.relativenumber = true
 vim.opt.number = true
-vim.opt.numberwidth = 4
+vim.opt.numberwidth = 6
 vim.opt.scrolloff = 8
 vim.opt.title = true
 vim.opt.list = true
@@ -22,7 +22,7 @@ vim.opt.colorcolumn = '80'
 vim.opt.cursorline = false
 vim.opt.updatetime = 300
 vim.opt.swapfile = false
--- vim.opt.signcolumn = "yes:2"
+vim.opt.signcolumn = "yes:2"
 vim.opt.hlsearch = true
 
 -- alias :Q to :qa! and :W to :w
