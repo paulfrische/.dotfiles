@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 return {
   'akinsho/bufferline.nvim',
   config = function ()

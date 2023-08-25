@@ -13,7 +13,13 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup('paulfrische.plugins')
+require('lazy').setup('paulfrische.plugins', {
+  checker = {
+    enabled = true,
+    concurrency = 5,
+    notify = false,
+  }
+})
 
 pcall(require, 'paulfrische.set')
 pcall(require, 'paulfrische.remap')
