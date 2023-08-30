@@ -9,6 +9,10 @@ end
 M.attach = function(client, buffnr)
   local bufmap = require('paulfrische.util').bufmap
 
+  if client.server_capabilities.inlayHintProvider.resolveProvider then
+    M.toggle_inlay_hints()
+  end
+
   bufmap('n', '<leader>i', M.toggle_inlay_hints)
 
   -- Displays hover information about the symbol under the cursor
@@ -125,6 +129,7 @@ M.setup = function()
     }
   })
 
+---@diagnostic disable-next-line: param-type-mismatch
   local python = string.gsub(vim.fn.system('which python3'), '\n', '')
 
   lspconfig.pylsp.setup({
