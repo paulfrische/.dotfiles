@@ -20,3 +20,8 @@ vim.api.nvim_create_autocmd('BufEnter', {
   group = custom,
   command = 'set formatoptions-=cro',
 })
+
+vim.api.nvim_create_autocmd('BufWritePost', {
+  pattern = '*.lua',
+  command = '!stylua %'
+})
