@@ -49,3 +49,9 @@ map('n', '<leader>v', '<cmd>vsplit<CR>', 'open vertical split')
 -- buffers
 map('n', '<M-n>', '<cmd>bnext<CR>', 'cycle trough buffers')
 map('n', '<M-p>', '<cmd>bprevious<CR>', 'cycle trough buffers')
+
+-- notes
+map('n', '<leader>n', ':Neorg workspace ')
+
+-- open lazy ui
+map('n', '<leader>l', '<cmd>Lazy<cr>')

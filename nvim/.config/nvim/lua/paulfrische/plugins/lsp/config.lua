@@ -66,7 +66,7 @@ M.setup = function()
     border = '',
   })
 
-  require('mason').setup()
+  -- require('mason').setup()
   require('mason-lspconfig').setup()
 
   require('mason-lspconfig').setup({
