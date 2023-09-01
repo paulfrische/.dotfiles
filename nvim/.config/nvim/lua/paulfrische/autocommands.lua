@@ -23,5 +23,5 @@ vim.api.nvim_create_autocmd('BufEnter', {
 
 vim.api.nvim_create_autocmd('BufWritePost', {
   pattern = '*.lua',
-  command = '!stylua %'
+  command = '!stylua %',
 })

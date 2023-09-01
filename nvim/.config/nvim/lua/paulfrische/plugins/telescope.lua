@@ -5,7 +5,7 @@ return {
       'nvim-telescope/telescope-fzf-native.nvim',
       build = 'make',
     },
-    'nvim-telescope/telescope-file-browser.nvim'
+    'nvim-telescope/telescope-file-browser.nvim',
   },
   keys = {
     '<leader>f',
@@ -24,15 +24,13 @@ return {
         fzf = {
           override_generic_sorter = true,
         },
-        file_browser = {
-
-        },
+        file_browser = {},
       },
       defaults = {
         borderchars = {
           { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
-          prompt = { "─", "│", " ", "│", '┌', '┐', "│", "│" },
-          results = { "─", "│", "─", "│", "├", "┤", "┘", "└" },
+          prompt = { '─', '│', ' ', '│', '┌', '┐', '│', '│' },
+          results = { '─', '│', '─', '│', '├', '┤', '┘', '└' },
           preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
         },
 

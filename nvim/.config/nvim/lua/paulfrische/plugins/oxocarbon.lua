@@ -3,7 +3,7 @@ return {
   lazy = false,
   priority = 1000,
   enabled = require('paulfrische.color').theme == 'oxocarbon',
-  config = function ()
+  config = function()
     vim.cmd.colorscheme('oxocarbon')
-  end
+  end,
 }

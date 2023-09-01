@@ -26,5 +26,5 @@ return {
     map('n', '<right>', '<cmd>DapStepInto<cr>')
 
     dap_ui.setup()
-  end
+  end,
 }

@@ -23,7 +23,12 @@ map('n', '<ESC>', ':noh<CR>:echo<CR>', 'hide search highlight stuff')
 -- map('n', '<leader>c', ':Jaq<CR>', 'run code in jaq')
 
 -- terminal
-map('n', '<leader>t', ':ToggleTerm direction=float<CR>', 'open floating terminal')
+map(
+  'n',
+  '<leader>t',
+  ':ToggleTerm direction=float<CR>',
+  'open floating terminal'
+)
 
 -- lazygit
 map('n', '<leader>g', ':LazyGit<CR>', 'open LazyGit')
@@ -51,7 +56,8 @@ map('n', '<M-n>', '<cmd>bnext<CR>', 'cycle trough buffers')
 map('n', '<M-p>', '<cmd>bprevious<CR>', 'cycle trough buffers')
 
 -- notes
-map('n', '<leader>n', ':Neorg workspace ')
+map('n', '<leader>nn', '<cmd>Neorg index<cr>')
+map('n', '<leader>nr', '<cmd>Neorg return<cr>')
 
 -- open lazy ui
 map('n', '<leader>l', '<cmd>Lazy<cr>')

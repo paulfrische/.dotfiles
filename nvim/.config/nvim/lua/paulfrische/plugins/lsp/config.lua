@@ -1,6 +1,5 @@
 local M = {}
 
-
 M.toggle_inlay_hints = function()
   vim.lsp.inlay_hint(0, nil)
 end
@@ -25,10 +24,10 @@ M.attach = function(client, buffnr)
   bufmap('n', 'gD', vim.lsp.buf.declaration)
 
   -- Lists all the implementations for the symbol under the cursor
-  bufmap('n', 'gi',   '<cmd>Trouble lsp_implementations<cr>')
+  bufmap('n', 'gi', '<cmd>Trouble lsp_implementations<cr>')
 
   -- Jumps to the definition of the type symbol
-  bufmap('n', 'go',  '<cmd>Trouble lsp_definitions<cr>')
+  bufmap('n', 'go', '<cmd>Trouble lsp_definitions<cr>')
 
   -- Lists all the references
   bufmap('n', 'gr', '<cmd>Trouble lsp_references<cr>')
@@ -73,7 +72,7 @@ M.setup = function()
     ensure_installed = {
       'rust_analyzer',
       'lua_ls',
-      'pylsp'
+      'pylsp',
     },
   })
 
@@ -104,17 +103,17 @@ M.setup = function()
           checkThirdParty = false,
         },
         completion = {
-          callSnippet = 'Replace'
+          callSnippet = 'Replace',
         },
         hint = {
           enable = true,
-          arrayIndex = "Disable",
+          arrayIndex = 'Disable',
         },
         telemetry = {
-          enable = false
-        }
-      }
-    }
+          enable = false,
+        },
+      },
+    },
   })
 
   -- fix autocomplete etc. for extern libraries
@@ -124,12 +123,12 @@ M.setup = function()
       ['rust-analyzer'] = {
         cargo = {
           allFeatures = true,
-        }
-      }
-    }
+        },
+      },
+    },
   })
 
----@diagnostic disable-next-line: param-type-mismatch
+  ---@diagnostic disable-next-line: param-type-mismatch
   local python = string.gsub(vim.fn.system('which python3'), '\n', '')
 
   lspconfig.pylsp.setup({
@@ -139,10 +138,10 @@ M.setup = function()
         plugins = {
           jedi = {
             environment = python,
-          }
-        }
-      }
-    }
+          },
+        },
+      },
+    },
   })
 end
 

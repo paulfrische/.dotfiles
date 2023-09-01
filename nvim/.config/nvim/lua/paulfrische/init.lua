@@ -18,7 +18,7 @@ require('lazy').setup('paulfrische.plugins', {
     enabled = true,
     concurrency = 5,
     notify = false,
-  }
+  },
 })
 
 pcall(require, 'paulfrische.set')

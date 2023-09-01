@@ -15,7 +15,13 @@ M.compile = function()
   local saved_table = vim.json.decode(saved)
   local command = saved_table[vim.fn.getcwd(0)] or ''
 
-  command = check(vim.fn.input({ prompt = 'compile command: ', default = command, cancelreturn = false }))
+  command = check(
+    vim.fn.input({
+      prompt = 'compile command: ',
+      default = command,
+      cancelreturn = false,
+    })
+  )
 
   if not command then
     print('compiling aborted')

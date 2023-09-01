@@ -1,12 +1,12 @@
 ---@diagnostic disable: missing-fields
 return {
   'akinsho/bufferline.nvim',
-  config = function ()
+  config = function()
     local bufferline = require('bufferline')
     bufferline.setup({
       options = {
-        separator_style = 'slant'
-      }
+        separator_style = 'slant',
+      },
     })
-  end
+  end,
 }

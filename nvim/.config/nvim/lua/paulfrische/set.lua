@@ -16,15 +16,15 @@ vim.opt.title = true
 vim.opt.list = true
 vim.opt.listchars:append('trail:·')
 vim.opt.fillchars:append('eob: ')
-vim.opt.listchars:append("eol:↴")
+vim.opt.listchars:append('eol:↴')
 vim.opt.undofile = true
 vim.opt.colorcolumn = '80'
 vim.opt.cursorline = false
 vim.opt.updatetime = 300
 vim.opt.swapfile = false
-vim.opt.signcolumn = "yes:2"
+vim.opt.signcolumn = 'yes:2'
 vim.opt.hlsearch = true
-vim.opt.guicursor=nil
+vim.opt.guicursor = nil
 
 -- alias :Q to :qa! and :W to :w
 vim.api.nvim_create_user_command('Q', 'qa!', {})
