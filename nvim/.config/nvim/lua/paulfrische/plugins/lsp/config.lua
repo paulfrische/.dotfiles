@@ -8,10 +8,6 @@ end
 M.attach = function(client, buffnr)
   local bufmap = require('paulfrische.util').bufmap
 
-  if client.server_capabilities.inlayHintProvider.resolveProvider then
-    M.toggle_inlay_hints()
-  end
-
   bufmap('n', '<leader>i', M.toggle_inlay_hints)
 
   -- Displays hover information about the symbol under the cursor
@@ -56,6 +52,10 @@ M.attach = function(client, buffnr)
   -- code actions
   bufmap({ 'n', 'v' }, '<M-CR>', vim.lsp.buf.code_action)
   bufmap({ 'n', 'v' }, 'ga', vim.lsp.buf.code_action)
+
+  if client.server_capabilities.inlayHintProvider.resolveProvider then
+    M.toggle_inlay_hints()
+  end
 end
 
 M.setup = function()
