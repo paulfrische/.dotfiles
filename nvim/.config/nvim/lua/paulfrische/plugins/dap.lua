@@ -5,6 +5,9 @@ return {
     'mfussenegger/nvim-dap',
     'jay-babu/mason-nvim-dap.nvim',
   },
+  cmd = {
+    'DapContinue',
+  },
   config = function()
     local dap = require('dap')
     local dap_ui = require('dapui')

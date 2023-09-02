@@ -3,6 +3,7 @@ return {
   dependencies = {
     'williamboman/mason.nvim',
   },
+  ft = 'rust',
   config = function()
     local rt = require('rust-tools')
     local mason_registry = require('mason-registry')
