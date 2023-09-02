@@ -27,6 +27,7 @@ return {
         file_browser = {},
       },
       defaults = {
+        sorting_strategy = 'ascending',
         borderchars = {
           { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
           prompt = { '─', '│', ' ', '│', '┌', '┐', '│', '│' },

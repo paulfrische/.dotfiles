@@ -1,6 +1,7 @@
+local color = require('paulfrische.color')
 return {
   'folke/tokyonight.nvim',
-  enabled = require('paulfrische.color').theme == 'tokyonight',
+  enabled = color.theme == color.themes.TOKYONIGHT,
   lazy = false,
   priority = 1000,
   config = function()

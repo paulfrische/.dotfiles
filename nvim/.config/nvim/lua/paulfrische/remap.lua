@@ -23,12 +23,7 @@ map('n', '<ESC>', ':noh<CR>:echo<CR>', 'hide search highlight stuff')
 -- map('n', '<leader>c', ':Jaq<CR>', 'run code in jaq')
 
 -- terminal
-map(
-  'n',
-  '<leader>t',
-  ':ToggleTerm direction=float<CR>',
-  'open floating terminal'
-)
+map('n', '<leader>t', '<cmd>ToggleTerm<cr>', 'open terminal')
 
 -- lazygit
 map('n', '<leader>g', ':LazyGit<CR>', 'open LazyGit')

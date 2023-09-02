@@ -1,5 +1,6 @@
+local color = require('paulfrische.color')
 return {
-  enabled = require('paulfrische.color').theme == 'codedark',
+  enabled = color.theme == color.themes.CODEDARK,
   'Mofiqul/vscode.nvim',
   config = function()
     require('vscode').load()
