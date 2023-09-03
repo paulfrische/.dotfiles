@@ -13,3 +13,4 @@ local util = require('paulfrische.util')
 
 P = util.print_table
 Words = util.words_in_buffer
+Selected = util.selected

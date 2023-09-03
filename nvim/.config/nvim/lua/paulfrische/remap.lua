@@ -51,8 +51,11 @@ map('n', '<M-n>', '<cmd>bnext<CR>', 'cycle trough buffers')
 map('n', '<M-p>', '<cmd>bprevious<CR>', 'cycle trough buffers')
 
 -- notes
-map('n', '<leader>nn', '<cmd>Neorg index<cr>')
-map('n', '<leader>nr', '<cmd>Neorg return<cr>')
+map('n', '<leader>nn', '<cmd>Neorg index<cr>', 'open notes')
+map('n', '<leader>nr', '<cmd>Neorg return<cr>', 'return from notes')
 
 -- open lazy ui
-map('n', '<leader>l', '<cmd>Lazy<cr>')
+map('n', '<leader>l', '<cmd>Lazy<cr>', 'open lazy.nvim ui')
+
+-- toggle hex editor ('binary')
+map('n', '<leader>b', '<cmd>HexToggle<cr>', 'toggle hex editor')

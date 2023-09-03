@@ -32,6 +32,27 @@ M.words_in_buffer = function()
   return words
 end
 
+-- TODO: make this work
+---@return string
+M.selected = function()
+  local start = vim.api.nvim_buf_get_mark(0, '<')
+  local ending = vim.api.nvim_buf_get_mark(0, '>')
+
+  if vim.fn.visualmode() == 'V' then
+    local last =
+      vim.api.nvim_buf_get_lines(0, ending[1], ending[1] + 1, false)[1]
+    ending[2] = #last
+  end
+
+  M.print_table(start)
+  M.print_table(ending)
+
+  return vim.fn.join(
+    vim.api.nvim_buf_get_text(0, start[1], start[2], ending[1], ending[2], {}),
+    '\n'
+  )
+end
+
 M.map = function(mode, lhs, rhs, desc)
   vim.keymap.set(mode, lhs, rhs, { desc = desc, silent = true })
 end
