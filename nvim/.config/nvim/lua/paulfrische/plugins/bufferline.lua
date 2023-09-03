@@ -5,7 +5,8 @@ return {
     local bufferline = require('bufferline')
     bufferline.setup({
       options = {
-        separator_style = 'slant',
+        -- separator_style = 'slant' | 'slope' | 'thick' | 'thin' | { 'any', 'any' },
+        separator_style = 'thin',
       },
     })
   end,
