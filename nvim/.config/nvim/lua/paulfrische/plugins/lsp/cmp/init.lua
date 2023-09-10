@@ -1,6 +1,7 @@
 local M = {}
 
 M.sources = {
+  { name = 'neorg' },
   { name = 'nvim_lsp', priority = 1000 },
   { name = 'luasnip', keyword_length = 2 },
   { name = 'crates' },
