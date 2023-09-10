@@ -10,7 +10,7 @@ vim.opt.wrap = false
 vim.opt.cmdheight = 0
 vim.opt.relativenumber = true
 vim.opt.number = true
-vim.opt.numberwidth = 6
+-- vim.opt.numberwidth = 6
 vim.opt.scrolloff = 8
 vim.opt.title = true
 vim.opt.list = true
@@ -24,8 +24,26 @@ vim.opt.updatetime = 300
 vim.opt.swapfile = false
 vim.opt.signcolumn = 'yes:2'
 vim.opt.hlsearch = true
-vim.opt.guicursor = nil
+vim.opt.guicursor = 'a:block'
 
--- alias :Q to :qa! and :W to :w
+-- alias :Q to :qa!, :W to :w, :Wq to :wq, :WQ to :wq
 vim.api.nvim_create_user_command('Q', 'qa!', {})
 vim.api.nvim_create_user_command('W', 'w', {})
+vim.api.nvim_create_user_command('Wq', 'wq', {})
+vim.api.nvim_create_user_command('WQ', 'wq', {})
+
+-- configure neovide
+if vim.g.neovide then
+  vim.o.guifont = 'JetBrains Mono:h10'
+
+  vim.g.neovide_cursor_animation_length = 0.05
+  vim.g.neovide_cursor_trail_size = 0.1
+
+  local pad = 10
+  -- padding between lines
+  vim.opt.linespace = 6
+  vim.g.neovide_padding_top = pad
+  vim.g.neovide_padding_bottom = pad
+  vim.g.neovide_padding_right = pad
+  vim.g.neovide_padding_left = pad
+end

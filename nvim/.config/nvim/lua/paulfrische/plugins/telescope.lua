@@ -6,6 +6,7 @@ return {
       build = 'make',
     },
     'nvim-telescope/telescope-file-browser.nvim',
+    'nvim-telescope/telescope-ui-select.nvim',
   },
   keys = {
     '<leader>f',
@@ -21,10 +22,11 @@ return {
 
     telescope.setup({
       extensions = {
-        fzf = {
+        ['fzf'] = {
           override_generic_sorter = true,
         },
-        file_browser = {},
+        ['file_browser'] = {},
+        ['ui-select'] = {},
       },
       defaults = {
         sorting_strategy = 'ascending',
@@ -57,6 +59,7 @@ return {
     end
 
     telescope.load_extension('file_browser')
+    telescope.load_extension('ui-select')
 
     local map = require('paulfrische.util').map
 

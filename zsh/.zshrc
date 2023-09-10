@@ -1,5 +1,5 @@
 
-export PATH="$PATH:$HOME/.local/bin:$HOME/.local/share/bob/nvim-bin"
+export PATH="$HOME/.local/bin:$HOME/.local/share/bob/nvim-bin:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 export XDG_CONFIG_HOME="$HOME/.config"
 

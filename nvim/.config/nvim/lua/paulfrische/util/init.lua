@@ -40,8 +40,8 @@ M.selected = function()
 
   if vim.fn.visualmode() == 'V' then
     local last =
-      vim.api.nvim_buf_get_lines(0, ending[1], ending[1] + 1, false)[1]
-    ending[2] = #last
+      vim.api.nvim_buf_get_lines(0, ending[1], ending[1] + 1, true)[1]
+    ending[2] = #last - 1
   end
 
   M.print_table(start)
