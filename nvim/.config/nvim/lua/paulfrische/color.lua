@@ -7,8 +7,9 @@ M.themes = {
   OXOCARBON = 'oxocarbon',
   TOKYONIGHT = 'tokyonight',
   GITHUB = 'github',
+  MIDNIGHT = 'midnight',
 }
 
-M.theme = M.themes.CATPUCCIN
+M.theme = M.themes.MIDNIGHT
 
 return M

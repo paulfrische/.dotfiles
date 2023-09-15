@@ -135,6 +135,31 @@ schemes:
       cyan:    '#7dcfff'
       white:   '#c0caf5'
 
+  midnight: &midnight
+    primary:
+      background: "#080c10"
+      foreground: "#b5bdc5"
+
+    normal:
+      black: "#181818"
+      magenta: "#a665d0"
+      green: "#42be65"
+      yellow: "#c8b670"
+      blue: "#5080ff"
+      red: "#fa4d56"
+      cyan: "#50b0e0"
+      white: "#b5bdc5"
+
+    bright:
+      black: "#525252"
+      magenta: "#a3a0d8"
+      green: "#7ac098"
+      yellow: "#f8e6a0"
+      blue: "#78a9ff"
+      red: "#ff7279"
+      cyan: "#9ac6e0"
+      white: "#e0e0e0"
+
   oxocarbon: &oxocarbon
     primary:
       background: "#161616"
@@ -240,4 +265,4 @@ schemes:
         cyan: "#94E2D5" # teal
         white: "#BAC2DE" # subtext1
 
-colors: *catpuccin
+colors: *midnight
