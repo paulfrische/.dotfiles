@@ -28,13 +28,21 @@ vim.opt.guicursor = 'a:block'
 
 -- alias :Q to :qa!, :W to :w, :Wq to :wq, :WQ to :wq
 vim.api.nvim_create_user_command('Q', 'qa!', {})
-vim.api.nvim_create_user_command('W', 'w', {})
-vim.api.nvim_create_user_command('Wq', 'wq', {})
-vim.api.nvim_create_user_command('WQ', 'wq', {})
+vim.api.nvim_create_user_command('W', 'w ++p', {})
+vim.api.nvim_create_user_command('Wq', 'wq ++p', {})
+vim.api.nvim_create_user_command('WQ', 'wq ++p', {})
+
+local fonts = {
+  JETBRAINS = 'JetBrains Mono',
+  IOSEVKA = 'Iosevka Nerd Font Mono',
+}
+
+local current_font = fonts.JETBRAINS
+local current_font_size = 10
 
 -- configure neovide
 if vim.g.neovide then
-  vim.o.guifont = 'JetBrains Mono:h10'
+  vim.o.guifont = current_font .. ':h' .. current_font_size
 
   vim.g.neovide_cursor_animation_length = 0.05
   vim.g.neovide_cursor_trail_size = 0.1
