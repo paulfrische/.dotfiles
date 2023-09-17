@@ -5,7 +5,12 @@ return {
   enabled = color.theme == color.themes.GRUVBOX,
   config = function()
     require('gruvbox').setup({
-      contrast = 'hard',
+      contrast = 'soft',
+      overrides = {
+        Normal = {
+          bg = '#000000',
+        },
+      },
     })
     vim.cmd.colorscheme('gruvbox')
   end,

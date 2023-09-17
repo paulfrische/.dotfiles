@@ -25,9 +25,6 @@ map('n', '<ESC>', ':noh<CR>:echo<CR>', 'hide search highlight stuff')
 -- terminal
 map('n', '<leader>t', '<cmd>ToggleTerm<cr>', 'open terminal')
 
--- lazygit
-map('n', '<leader>g', ':LazyGit<CR>', 'open LazyGit')
-
 -- move around text in visual-mode
 map('v', '<C-j>', ':m \'>+1<CR>gv=gv')
 map('v', '<C-k>', ':m \'<-2<CR>gv=gv')
