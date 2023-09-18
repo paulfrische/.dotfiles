@@ -35,10 +35,12 @@ vim.api.nvim_create_user_command('WQ', 'wq ++p', {})
 local fonts = {
   JETBRAINS = 'JetBrains Mono',
   IOSEVKA = 'Iosevka Nerd Font Mono',
+  UBUNTU = 'UbuntuMono Nerd Font Mono',
 }
 
-local current_font = fonts.JETBRAINS
-local current_font_size = 10
+local current_font = fonts.UBUNTU
+local current_font_size = 14
+-- vim.opt.linespace = 6
 
 -- configure neovide
 if vim.g.neovide then
@@ -49,7 +51,6 @@ if vim.g.neovide then
 
   local pad = 10
   -- padding between lines
-  vim.opt.linespace = 6
   vim.g.neovide_padding_top = pad
   vim.g.neovide_padding_bottom = pad
   vim.g.neovide_padding_right = pad
