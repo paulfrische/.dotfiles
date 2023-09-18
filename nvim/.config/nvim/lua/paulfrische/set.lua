@@ -38,7 +38,7 @@ local fonts = {
   UBUNTU = 'UbuntuMono Nerd Font Mono',
 }
 
-local current_font = fonts.UBUNTU
+local current_font = fonts.JETBRAINS
 local current_font_size = 14
 -- vim.opt.linespace = 6
 
