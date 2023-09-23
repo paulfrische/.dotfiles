@@ -5,30 +5,28 @@ return {
   cmd = {
     'Neorg',
   },
-  config = function()
-    require('neorg').setup({
-      load = {
-        ['core.defaults'] = {}, -- Loads default behaviour
-        ['core.completion'] = {
-          config = {
-            engine = 'nvim-cmp',
+  opts = {
+    load = {
+      ['core.defaults'] = {}, -- Loads default behaviour
+      ['core.completion'] = {
+        config = {
+          engine = 'nvim-cmp',
+        },
+      }, -- Loads default behaviour
+      ['core.keybinds'] = {
+        config = {
+          default_keybinds = true,
+        },
+      }, -- Loads default keybinds
+      ['core.concealer'] = {}, -- Adds pretty icons to your documents
+      ['core.dirman'] = { -- Manages Neorg workspaces
+        config = {
+          workspaces = {
+            notes = '~/notes',
           },
-        }, -- Loads default behaviour
-        ['core.keybinds'] = {
-          config = {
-            default_keybinds = true,
-          },
-        }, -- Loads default keybinds
-        ['core.concealer'] = {}, -- Adds pretty icons to your documents
-        ['core.dirman'] = { -- Manages Neorg workspaces
-          config = {
-            workspaces = {
-              notes = '~/notes',
-            },
-            default_workspace = 'notes',
-          },
+          default_workspace = 'notes',
         },
       },
-    })
-  end,
+    },
+  },
 }

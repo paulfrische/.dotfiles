@@ -39,8 +39,8 @@ local fonts = {
 }
 
 local current_font = fonts.JETBRAINS
-local current_font_size = 14
--- vim.opt.linespace = 6
+local current_font_size = 10
+vim.opt.linespace = 6
 
 -- configure neovide
 if vim.g.neovide then

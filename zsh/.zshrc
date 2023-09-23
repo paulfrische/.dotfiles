@@ -10,7 +10,7 @@ ZSH_THEME="robbyrussell" # set by `omz`
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION=true
 
-plugins=(git zsh-nvm python pdm)
+plugins=(git zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -50,5 +50,7 @@ zstyle ':completion:*' menu select
 
 # eval "$(starship init zsh)"
 
+eval "$(zoxide init zsh)"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
