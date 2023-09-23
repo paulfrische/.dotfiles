@@ -33,18 +33,20 @@ vim.api.nvim_create_user_command('Wq', 'wq ++p', {})
 vim.api.nvim_create_user_command('WQ', 'wq ++p', {})
 
 local fonts = {
-  JETBRAINS = 'JetBrains Mono',
-  IOSEVKA = 'Iosevka Nerd Font Mono',
-  UBUNTU = 'UbuntuMono Nerd Font Mono',
+  JETBRAINS = { 'JetBrains Mono', 10 },
+  IOSEVKA = { 'Iosevka Nerd Font Mono', 12 },
+  UBUNTU = { 'UbuntuMono Nerd Font Mono', 13 },
 }
 
 local current_font = fonts.JETBRAINS
-local current_font_size = 10
-vim.opt.linespace = 6
+-- vim.opt.linespace = 6
 
 -- configure neovide
 if vim.g.neovide then
-  vim.o.guifont = current_font .. ':h' .. current_font_size
+  vim.o.guifont = current_font[1]
+    .. ':h'
+    .. current_font[2]
+    .. ':#e-subpixelantialias'
 
   vim.g.neovide_cursor_animation_length = 0.05
   vim.g.neovide_cursor_trail_size = 0.1

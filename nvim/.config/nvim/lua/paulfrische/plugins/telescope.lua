@@ -64,7 +64,7 @@ return {
     local map = require('paulfrische.util').map
 
     map('n', '<leader>f', builtin.find_files)
-    map('n', '<leader>x', telescope.extensions.file_browser.file_browser)
+    -- map('n', '<leader>x', telescope.extensions.file_browser.file_browser)
     map('n', '<leader>ds', builtin.lsp_document_symbols)
     map('n', '<leader>ws', builtin.lsp_dynamic_workspace_symbols)
     map('n', '<leader>s', function()
