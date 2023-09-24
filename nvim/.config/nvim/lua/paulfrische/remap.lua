@@ -3,8 +3,10 @@ local map = require('paulfrische.util').map
 -- open man page
 map('n', '<leader>m', function()
   local p = vim.fn.input('man page > ')
-  vim.cmd('bot Man ' .. p)
+  vim.cmd('vertical Man ' .. p)
 end, 'open man page')
+
+map('n', '<leader>df', vim.diagnostic.open_float, 'open diagnostic in float')
 
 -- exit without typing q
 map('n', '<leader>e', '<cmd>q<cr>', 'exit without typing q')
@@ -46,7 +48,7 @@ map('n', '<Tab>h', '<C-w>h', 'navigate splits like chars')
 map('n', '<Tab>j', '<C-w>j', 'navigate splits like chars')
 map('n', '<Tab>k', '<C-w>k', 'navigate splits like chars')
 map('n', '<Tab>l', '<C-w>l', 'navigate splits like chars')
-map('n', '<leader>h', '<cmd>split<CR>', 'open horizontal split')
+-- map('n', '<leader>h', '<cmd>split<CR>', 'open horizontal split')
 map('n', '<leader>v', '<cmd>vsplit<CR>', 'open vertical split')
 
 -- buffers

@@ -8,6 +8,7 @@ M.themes = {
   TOKYONIGHT = 'tokyonight',
   GITHUB = 'github',
   MIDNIGHT = 'midnight',
+  KANAGAWA = 'kanagawa',
 }
 
 M.theme = M.themes.MIDNIGHT

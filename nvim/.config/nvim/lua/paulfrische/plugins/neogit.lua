@@ -1,5 +1,5 @@
 local function NG()
-  require('neogit').open({ kind = 'vsplit' })
+  require('neogit').open({ kind = 'tab' })
 end
 
 local function NG_COMMIT()

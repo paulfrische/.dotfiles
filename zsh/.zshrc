@@ -31,13 +31,13 @@ bindkey -v
 alias v="nvim"
 alias p="python"
 alias n="nvim ."
-alias nrcj="cd ~/.config/nvim/ && nvim init.lua"
+alias nrcj="z ~/.config/nvim/ && nvim init.lua"
 alias nkitty="nvim ~/.config/kitty/kitty.conf"
 alias ls="exa -lah --icons"
 alias nzsh="nvim ~/.zshrc"
-alias jbsp="cd ~/.config/bspwm"
+alias jbsp="z ~/.config/bspwm"
 alias mountd="doas mount /dev/sdb ~/d"
-alias jd="cd ~/d"
+alias jd="z ~/d"
 alias yay="yay --sudo doas --sudoflags -- --save"
 alias docker="doas podman"
 alias lg="lazygit"
@@ -45,6 +45,7 @@ alias vc="nvim --cmd 'set rtp+=.'"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias config-add='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add -u'
 alias c="cargo"
+alias cd="z"
 
 zstyle ':completion:*' menu select
 

@@ -9,18 +9,18 @@ window:
   dynamic_title: true
 font:
   normal:
-    family:  JetBrains Mono Nerd Font
+    family:  Iosevka Nerd Font
     style: Medium
   bold:
-    family:  JetBrains Mono Nerd Font
+    family:  Iosevka Nerd Font
     style: ExtraBold
   italic:
-    family:  JetBrains Mono Nerd Font
+    family:  Iosevka Nerd Font
     style: Medium Italic
   bold_italic:
-    family:  JetBrains Mono Nerd Font
+    family:  Iosevka Nerd Font
     style: ExtraBold Italic
-  size: 11.0
+  size: 12.0
 
 schemes:
   gruvbox: &gruvbox
