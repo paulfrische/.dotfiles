@@ -44,16 +44,16 @@ map('n', '<leader>z', ':ZenMode<CR>', 'toggle ZenMode')
 map('t', '<ESC>', '<C-\\><C-n>')
 
 -- splits
-map('n', '<Tab>h', '<C-w>h', 'navigate splits like chars')
-map('n', '<Tab>j', '<C-w>j', 'navigate splits like chars')
-map('n', '<Tab>k', '<C-w>k', 'navigate splits like chars')
-map('n', '<Tab>l', '<C-w>l', 'navigate splits like chars')
+-- map('n', '<Tab>h', '<C-w>h', 'navigate splits like chars')
+-- map('n', '<Tab>j', '<C-w>j', 'navigate splits like chars')
+-- map('n', '<Tab>k', '<C-w>k', 'navigate splits like chars')
+-- map('n', '<Tab>l', '<C-w>l', 'navigate splits like chars')
 -- map('n', '<leader>h', '<cmd>split<CR>', 'open horizontal split')
 map('n', '<leader>v', '<cmd>vsplit<CR>', 'open vertical split')
 
 -- buffers
-map('n', '<Tab>n', '<cmd>bnext<CR>', 'cycle trough buffers')
-map('n', '<Tab>p', '<cmd>bprevious<CR>', 'cycle trough buffers')
+-- map('n', '<Tab>n', '<cmd>bnext<CR>', 'cycle trough buffers')
+-- map('n', '<Tab>p', '<cmd>bprevious<CR>', 'cycle trough buffers')
 
 -- notes
 map('n', '<leader>nn', '<cmd>Neorg index<cr>', 'open notes')
@@ -64,3 +64,12 @@ map('n', '<leader>l', '<cmd>Lazy<cr>', 'open lazy.nvim ui')
 
 -- toggle hex editor ('binary')
 map('n', '<leader>b', '<cmd>HexToggle<cr>', 'toggle hex editor')
+
+local function zoom(factor)
+  return function()
+    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + factor
+  end
+end
+
+map('n', '<leader>+', zoom(0.1), 'zoom in')
+map('n', '<leader>-', zoom(-0.1), 'zoom out')
