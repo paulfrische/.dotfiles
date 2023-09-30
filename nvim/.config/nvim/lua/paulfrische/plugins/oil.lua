@@ -1,13 +1,9 @@
-local function OPEN_OIL()
-  require('oil').open()
-end
-
 return {
   'stevearc/oil.nvim',
-  keys = {
-    { '<leader>x', OPEN_OIL, desc = 'open oil' },
-  },
-  opts = {},
+  config = function()
+    require('oil').setup()
+    require('paulfrische.util').map('n', '<leader>x', require('oil').open)
+  end,
   dependencies = {
     'nvim-tree/nvim-web-devicons',
   },

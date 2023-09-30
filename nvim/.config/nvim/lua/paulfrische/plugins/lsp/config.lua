@@ -6,52 +6,53 @@ end
 
 ---@diagnostic disable-next-line: unused-local
 M.attach = function(client, buffnr)
-  local bufmap = require('paulfrische.util').bufmap
+  -- local bufmap = require('paulfrische.util').bufmap
+  local map = require('paulfrische.util').map
 
-  bufmap('n', '<leader>i', M.toggle_inlay_hints)
+  map('n', '<leader>i', M.toggle_inlay_hints)
 
   -- Displays hover information about the symbol under the cursor
-  bufmap('n', 'K', vim.lsp.buf.hover)
+  map('n', 'K', vim.lsp.buf.hover)
 
   -- Jump to the definition
-  bufmap('n', 'gd', vim.lsp.buf.definition)
+  map('n', 'gd', vim.lsp.buf.definition)
 
   -- Jump to declaration
-  bufmap('n', 'gD', vim.lsp.buf.declaration)
+  map('n', 'gD', vim.lsp.buf.declaration)
 
   -- Lists all the implementations for the symbol under the cursor
-  bufmap('n', 'gi', '<cmd>Trouble lsp_implementations<cr>')
+  map('n', 'gi', '<cmd>Trouble lsp_implementations<cr>')
 
   -- Jumps to the definition of the type symbol
-  bufmap('n', 'go', '<cmd>Trouble lsp_definitions<cr>')
+  map('n', 'go', '<cmd>Trouble lsp_definitions<cr>')
 
   -- Lists all the references
-  bufmap('n', 'gr', '<cmd>Trouble lsp_references<cr>')
+  map('n', 'gr', '<cmd>Trouble lsp_references<cr>')
 
   -- Displays a function's signature information
-  bufmap('n', 'gs', vim.lsp.buf.signature_help)
+  map('n', 'gs', vim.lsp.buf.signature_help)
 
   -- Show diagnostics in a floating window
-  bufmap('n', 'gl', vim.diagnostic.open_float)
+  map('n', 'gl', vim.diagnostic.open_float)
 
   -- Move to the previous diagnostic
-  bufmap('n', '[d', vim.diagnostic.goto_prev)
+  map('n', '[d', vim.diagnostic.goto_prev)
 
   -- Move to the next diagnostic
-  bufmap('n', ']d', vim.diagnostic.goto_next)
+  map('n', ']d', vim.diagnostic.goto_next)
 
   -- rename
-  bufmap('n', 'gn', vim.lsp.buf.rename)
+  map('n', 'gn', vim.lsp.buf.rename)
 
   -- diagnostics
-  bufmap('n', 'ge', require('trouble').open)
+  map('n', 'ge', require('trouble').open)
 
   -- format buffer
-  bufmap('n', 'gf', vim.lsp.buf.format)
+  map('n', 'gf', vim.lsp.buf.format)
 
   -- code actions
-  bufmap({ 'n', 'v' }, '<M-CR>', vim.lsp.buf.code_action)
-  bufmap({ 'n', 'v' }, 'ga', vim.lsp.buf.code_action)
+  map({ 'n', 'v' }, '<M-CR>', vim.lsp.buf.code_action)
+  map({ 'n', 'v' }, 'ga', vim.lsp.buf.code_action)
 
   if client.server_capabilities.inlayHintProvider.resolveProvider then
     M.toggle_inlay_hints()
