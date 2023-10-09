@@ -6,6 +6,5 @@ nitrogen --restore &
 pkill picom
 pkill redshift-gtk
 picom &
-mpd &
 setxkbmap eu
 redshift-gtk &
