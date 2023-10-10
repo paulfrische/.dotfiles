@@ -11,6 +11,6 @@ M.themes = {
   KANAGAWA = 'kanagawa',
 }
 
-M.theme = M.themes.MIDNIGHT
+M.theme = M.themes.TOKYONIGHT
 
 return M

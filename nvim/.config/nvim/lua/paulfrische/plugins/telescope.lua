@@ -60,12 +60,17 @@ return {
 
     local map = require('paulfrische.util').map
 
-    map('n', '<leader>f', builtin.find_files)
-    map('n', '<leader>ds', builtin.lsp_document_symbols)
-    map('n', '<leader>ws', builtin.lsp_dynamic_workspace_symbols)
+    map('n', '<leader>f', builtin.find_files, 'find file')
+    map('n', '<leader>ds', builtin.lsp_document_symbols, 'document symbols')
+    map(
+      'n',
+      '<leader>ws',
+      builtin.lsp_dynamic_workspace_symbols,
+      'workspace symbols'
+    )
     map('n', '<leader>s', function()
       builtin.grep_string({ search = vim.fn.input('Grep > ') })
-    end)
+    end, 'find string in project')
 
     vim.api.nvim_create_user_command('TH', 'Telescope help_tags', {})
   end,

@@ -265,4 +265,4 @@ schemes:
         cyan: "#94E2D5" # teal
         white: "#BAC2DE" # subtext1
 
-colors: *midnight
+colors: *tokyonight
