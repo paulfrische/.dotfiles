@@ -11,3 +11,4 @@ stow -vDt $HOME emacs
 stow -vDt $HOME tmux
 stow -vDt $HOME zsh
 stow -vDt $HOME scripts
+stow -vDt $HOME home-manager
