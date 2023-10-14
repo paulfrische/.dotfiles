@@ -10,16 +10,9 @@
   # environment.
   fonts.fontconfig.enable = true;
   home.packages = [
-    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" "Iosevka" "UbuntuMono" ];})
     pkgs.htop
     pkgs.eza
     pkgs.delta
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
   ];
 
   programs.git = {
