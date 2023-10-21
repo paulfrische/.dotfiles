@@ -8,9 +8,6 @@ end, 'open man page')
 
 map('n', '<leader>df', vim.diagnostic.open_float, 'open diagnostic in float')
 
--- exit without typing q
-map('n', '<leader>e', '<cmd>q<cr>', 'exit without typing q')
-
 -- compiling
 map('n', '<leader>c', require('paulfrische.compile').compile, 'compile code')
 

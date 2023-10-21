@@ -25,7 +25,6 @@ return {
         null_ls.builtins.diagnostics.ruff,
         null_ls.builtins.formatting.jq,
         null_ls.builtins.code_actions.refactoring,
-        null_ls.builtins.formatting.prettier,
       },
 
       on_attach = function(client, bufnr)

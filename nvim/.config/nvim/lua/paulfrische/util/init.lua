@@ -40,7 +40,7 @@ M.selected = function()
 
   if vim.fn.visualmode() == 'V' then
     local last =
-      vim.api.nvim_buf_get_lines(0, ending[1], ending[1] + 1, true)[1]
+        vim.api.nvim_buf_get_lines(0, ending[1], ending[1] + 1, true)[1]
     ending[2] = #last - 1
   end
 
@@ -57,8 +57,8 @@ M.map = function(mode, lhs, rhs, desc)
   vim.keymap.set(mode, lhs, rhs, { desc = desc, silent = true })
 end
 
-M.bufmap = function(mode, lhs, rhs)
-  local opts = { buffer = true }
+M.bufmap = function(mode, lhs, rhs, desc)
+  local opts = { buffer = true, desc = desc, silent = true }
   vim.keymap.set(mode, lhs, rhs, opts)
 end
 

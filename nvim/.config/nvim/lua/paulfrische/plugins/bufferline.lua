@@ -1,6 +1,7 @@
 ---@diagnostic disable: missing-fields
 return {
   'akinsho/bufferline.nvim',
+  enabled = false,
   opts = {
     options = {
       -- separator_style = 'slant' | 'slope' | 'thick' | 'thin' | { 'any', 'any' },

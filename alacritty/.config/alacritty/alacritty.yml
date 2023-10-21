@@ -9,16 +9,16 @@ window:
   dynamic_title: true
 font:
   normal:
-    family:  RobotoMono Nerd Font Mono
+    family:  JetBrainsMono Nerd Font Mono
     style: Medium
   bold:
-    family:  RobotoMono Nerd Font Mono
+    family:  JetBrainsMono Nerd Font Mono
     style: ExtraBold
   italic:
-    family:  RobotoMono Nerd Font Mono
+    family:  JetBrainsMono Nerd Font Mono
     style: Medium Italic
   bold_italic:
-    family:  RobotoMono Nerd Font Mono
+    family:  JetBrainsMono Nerd Font Mono
     style: ExtraBold Italic
   size: 12.0
 
