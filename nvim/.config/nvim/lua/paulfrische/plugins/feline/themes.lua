@@ -1,0 +1,15 @@
+require('feline').add_theme('tokyonight', {
+  fg = '#c0caf5',
+  bg = '#24283b',
+  black = '#1f2335',
+  skyblue = '#7aa2f7',
+  cyan = '#7dcfff',
+  green = '#73daca',
+  oceanblue = '#3d59a1',
+  magenta = '#bb9af7',
+  orange = '#ff9e64',
+  red = '#f7768e',
+  violet = '#ff007c',
+  white = '#ffffff',
+  yellow = '#e0af68',
+})

@@ -1,5 +1,7 @@
 local M = {}
 
+require('paulfrische.plugins.feline.themes')
+
 local components = require('paulfrische.plugins.feline.components')
 M.components = {}
 

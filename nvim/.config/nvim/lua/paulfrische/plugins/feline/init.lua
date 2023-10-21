@@ -7,6 +7,7 @@ return {
     require('feline').setup({
       properties = properties,
       components = components,
+      theme = require('paulfrische.color').theme,
     })
   end,
 }
