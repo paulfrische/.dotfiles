@@ -1,5 +1,12 @@
 local M = {}
 
+M.icon = {
+  provider = ' 󰣠 ',
+  hl = {
+    fg = 'red',
+  },
+}
+
 -- mode
 local vi_mode_utils = require('feline.providers.vi_mode')
 local vi_mode_hl = function()
@@ -44,7 +51,7 @@ M.git = function()
 end
 
 M.lsp = function()
-  return M.lsp_name, M.lsp_errors, M.lsp_warnings, M.lsp_hints, M.lsp_info
+  return M.lsp_errors, M.lsp_warnings, M.lsp_hints, M.lsp_info
 end
 
 return M
