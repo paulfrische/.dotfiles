@@ -13,3 +13,19 @@ require('feline').add_theme('tokyonight', {
   white = '#ffffff',
   yellow = '#e0af68',
 })
+
+require('feline').add_theme('gruvbox', {
+  fg = '#ebdbb2',
+  bg = '#282828',
+  black = '#1d2021',
+  skyblue = '#83a598',
+  cyan = '#689d6a',
+  green = '#98971a',
+  oceanblue = '#458588',
+  magenta = '#b16286',
+  orange = '#d65d0e',
+  red = '#cc241d',
+  violet = '#d3869b',
+  white = '#fbf1c7',
+  yellow = '#fabd2f',
+})

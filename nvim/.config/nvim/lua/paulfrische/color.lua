@@ -11,6 +11,6 @@ M.themes = {
   KANAGAWA = 'kanagawa',
 }
 
-M.theme = M.themes.TOKYONIGHT
+M.theme = M.themes.GRUVBOX
 
 return M
