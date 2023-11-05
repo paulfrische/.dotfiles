@@ -11,7 +11,7 @@ M.themes = {
   KANAGAWA = 'kanagawa',
 }
 
-M.theme = M.themes.GRUVBOX
+M.theme = M.themes.MIDNIGHT
 M.transparent = true
 
 return M

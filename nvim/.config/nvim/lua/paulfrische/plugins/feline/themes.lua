@@ -29,3 +29,19 @@ require('feline').add_theme('gruvbox', {
   white = '#fbf1c7',
   yellow = '#fabd2f',
 })
+
+require('feline').add_theme('midnight', {
+  fg = '#b5bdc5',
+  bg = '#080c10',
+  black = '#181818',
+  skyblue = '#78a9ff',
+  cyan = '#1192e8',
+  green = '#6fdc8c',
+  oceanblue = '#5080ff',
+  magenta = '#ff94c3',
+  orange = '#ff832b',
+  red = '#fa4d56',
+  violet = '#a56eff',
+  white = '#ffffff',
+  yellow = '#e0af68',
+})
