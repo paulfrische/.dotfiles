@@ -1,9 +1,10 @@
+---@diagnostic disable: missing-fields
 local M = {}
 
 M.sources = {
   { name = 'neorg' },
   { name = 'nvim_lsp', priority = 1000 },
-  { name = 'luasnip', keyword_length = 2 },
+  { name = 'luasnip',  keyword_length = 2 },
   { name = 'crates' },
   { name = 'emoji' },
   { name = 'path' },
@@ -36,7 +37,7 @@ M.setup = function(options)
     signs = true,
     update_in_insert = true,
     underline = true,
-    float = true,
+    serverity_sort = true,
   })
 
   local cmp = require('cmp')

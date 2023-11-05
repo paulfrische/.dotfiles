@@ -24,7 +24,7 @@ vim.opt.updatetime = 300
 vim.opt.swapfile = false
 vim.opt.signcolumn = 'yes:2'
 vim.opt.hlsearch = true
-vim.opt.guicursor = 'a:block'
+-- vim.opt.guicursor = 'a:block'
 
 -- alias :Q to :qa!, :W to :w, :Wq to :wq, :WQ to :wq
 vim.api.nvim_create_user_command('Q', 'qa!', {})

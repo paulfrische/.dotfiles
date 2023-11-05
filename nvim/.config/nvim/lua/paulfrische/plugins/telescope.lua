@@ -13,6 +13,7 @@ return {
     '<leader>ds',
     '<leader>ws',
     '<leader>s',
+    '<leader>a',
   },
   cmd = { 'Telescope', 'TH' },
   config = function()

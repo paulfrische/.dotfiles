@@ -12,5 +12,6 @@ return {
       components = components,
       theme = require('paulfrische.color').theme,
     })
+    require('feline').winbar.setup({})
   end,
 }

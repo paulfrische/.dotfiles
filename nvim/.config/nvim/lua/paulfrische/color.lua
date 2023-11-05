@@ -12,5 +12,6 @@ M.themes = {
 }
 
 M.theme = M.themes.GRUVBOX
+M.transparent = true
 
 return M

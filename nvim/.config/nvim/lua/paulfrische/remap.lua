@@ -6,6 +6,14 @@ map('n', '<leader>m', function()
   vim.cmd('vertical Man ' .. p)
 end, 'open man page')
 
+-- autoindent
+vim.keymap.set('n', 'i', function()
+  if #vim.fn.getline('.') == 0 then
+    return '"_cc'
+  end
+  return 'i'
+end, { expr = true })
+
 map('n', '<leader>df', vim.diagnostic.open_float, 'open diagnostic in float')
 
 -- compiling
