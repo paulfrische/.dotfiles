@@ -9,16 +9,16 @@ window:
   dynamic_title: true
 font:
   normal:
-    family:  Iosevka Nerd Font Mono
-    style: Medium
+    family:  JetBrains Mono 
+    style: Bold
   bold:
-    family:  Iosevka Nerd Font Mono
+    family:  JetBrains Mono
     style: ExtraBold
   italic:
-    family:  Iosevka Nerd Font Mono
+    family:  JetBrains Mono
     style: Medium Italic
   bold_italic:
-    family:  Iosevka Nerd Font Mono
+    family:  JetBrains Mono
     style: ExtraBold Italic
   size: 12.0
 
