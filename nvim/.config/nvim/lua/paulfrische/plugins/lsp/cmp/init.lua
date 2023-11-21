@@ -8,6 +8,7 @@ M.sources = {
   { name = 'crates' },
   { name = 'emoji' },
   { name = 'path' },
+  { name = 'buffer' },
 }
 
 M.formatting = {
@@ -88,6 +89,27 @@ M.setup = function(options)
     experimental = {
       ghost_text = true,
     },
+  })
+
+  require('cmp').setup.cmdline('/', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {
+      { name = 'buffer' },
+    },
+  })
+
+  require('cmp').setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+      { name = 'path' },
+    }, {
+      {
+        name = 'cmdline',
+        option = {
+          ignore_cmds = { 'Man', '!' },
+        },
+      },
+    }),
   })
 end
 

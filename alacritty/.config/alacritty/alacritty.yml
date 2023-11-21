@@ -9,16 +9,16 @@ window:
   dynamic_title: true
 font:
   normal:
-    family:  JetBrains Mono 
+    family: MonaspiceAr NFM
     style: Bold
   bold:
-    family:  JetBrains Mono
+    family: MonaspiceAr NFM
     style: ExtraBold
   italic:
-    family:  JetBrains Mono
+    family: MonaspiceRn NFM
     style: Medium Italic
   bold_italic:
-    family:  JetBrains Mono
+    family: MonaspiceRn NFM
     style: ExtraBold Italic
   size: 12.0
 

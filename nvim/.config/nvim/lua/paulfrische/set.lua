@@ -26,6 +26,8 @@ vim.opt.signcolumn = 'yes:2'
 vim.opt.hlsearch = true
 -- vim.opt.guicursor = 'a:block'
 
+vim.opt.confirm = true
+
 -- alias :Q to :qa!, :W to :w, :Wq to :wq, :WQ to :wq
 vim.api.nvim_create_user_command('Q', 'qa!', {})
 vim.api.nvim_create_user_command('W', 'w ++p', {})

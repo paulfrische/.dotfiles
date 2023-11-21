@@ -10,6 +10,7 @@ local highlight = {
 
 return {
   'lukas-reineke/indent-blankline.nvim',
+  enabled = false,
   event = 'UIEnter',
   config = function()
     local hooks = require('ibl.hooks')
