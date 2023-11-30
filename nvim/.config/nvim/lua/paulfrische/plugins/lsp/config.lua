@@ -22,9 +22,9 @@ M.attach = function(client, buffnr)
   bufmap({ 'n', 'v' }, '<leader>a', vim.lsp.buf.code_action)
   bufmap('n', '<leader>e', require('trouble').toggle)
 
-  if client.server_capabilities.inlayHintProvider.resolveProvider then
-    M.toggle_inlay_hints()
-  end
+  -- if client.server_capabilities.inlayHintProvider.resolveProvider then
+  --   M.toggle_inlay_hints()
+  -- end
 end
 
 M.setup = function()

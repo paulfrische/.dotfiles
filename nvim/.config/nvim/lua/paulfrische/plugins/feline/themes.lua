@@ -1,4 +1,6 @@
-require('feline').add_theme('tokyonight', {
+local themes = require('paulfrische.color').themes
+
+require('feline').add_theme(themes.TOKYONIGHT, {
   fg = '#c0caf5',
   bg = '#24283b',
   black = '#1f2335',
@@ -14,7 +16,7 @@ require('feline').add_theme('tokyonight', {
   yellow = '#e0af68',
 })
 
-require('feline').add_theme('gruvbox', {
+require('feline').add_theme(themes.GITHUB, {
   fg = '#ebdbb2',
   bg = '#282828',
   black = '#1d2021',
@@ -30,7 +32,7 @@ require('feline').add_theme('gruvbox', {
   yellow = '#fabd2f',
 })
 
-require('feline').add_theme('midnight', {
+require('feline').add_theme(themes.MIDNIGHT, {
   fg = '#b5bdc5',
   bg = '#080c10',
   black = '#181818',
@@ -44,4 +46,20 @@ require('feline').add_theme('midnight', {
   violet = '#a56eff',
   white = '#ffffff',
   yellow = '#e0af68',
+})
+
+require('feline').add_theme(themes.ROSE_PINE, {
+  fg = '#e0def4',
+  bg = '#21202e',
+  black = '#191724',
+  skyblue = '#9ccfd8',
+  cyan = '#31748f',
+  green = '#9ccfd8',
+  oceanblue = '#31748f',
+  magenta = '#ebbcba',
+  orange = '#f6c177',
+  red = '#eb6f92',
+  violet = '#ebbcba',
+  white = '#ffffff',
+  yellow = '#f6c177',
 })

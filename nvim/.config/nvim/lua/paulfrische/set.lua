@@ -19,7 +19,7 @@ vim.opt.fillchars:append('eob: ')
 -- vim.opt.listchars:append('eol:↴')
 vim.opt.undofile = true
 -- vim.opt.colorcolumn = '80'
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 vim.opt.updatetime = 300
 vim.opt.swapfile = false
 vim.opt.signcolumn = 'yes:2'
@@ -48,9 +48,9 @@ local current_font = fonts.JETBRAINS
 -- configure neovide
 if vim.g.neovide then
   vim.o.guifont = current_font[1]
-      .. ':h'
-      .. current_font[2]
-      .. ':#e-subpixelantialias'
+    .. ':h'
+    .. current_font[2]
+    .. ':#e-subpixelantialias'
 
   vim.g.neovide_cursor_animation_length = 0.05
   vim.g.neovide_cursor_trail_size = 0.1
