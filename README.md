@@ -15,3 +15,7 @@ $ ./uninstall.sh
 I use my custom dmenu alternative `launchme`. You can install it via cargo from
 crates.io:
 `$ cargo install launchme`
+
+# Cargo add-ons
+I use cargo-generate:
+`$ cargo install cargo-generate`
