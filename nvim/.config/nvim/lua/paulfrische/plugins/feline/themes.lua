@@ -16,7 +16,7 @@ require('feline').add_theme(themes.TOKYONIGHT, {
   yellow = '#e0af68',
 })
 
-require('feline').add_theme(themes.GITHUB, {
+require('feline').add_theme(themes.GRUVBOX, {
   fg = '#ebdbb2',
   bg = '#282828',
   black = '#1d2021',
@@ -30,6 +30,22 @@ require('feline').add_theme(themes.GITHUB, {
   violet = '#d3869b',
   white = '#fbf1c7',
   yellow = '#fabd2f',
+})
+
+require('feline').add_theme(themes.GITHUB, {
+  fg = '#f0f3f6',
+  bg = '#0a0c10',
+  black = '#0a0c10',
+  skyblue = '#91cbff',
+  cyan = '#4ae168',
+  green = '#26cd4d',
+  oceanblue = '#71b7ff',
+  magenta = '#cb9eff',
+  orange = '#ffb1af',
+  red = '#ff9492',
+  violet = '#dbb7ff',
+  white = '#f0f3f6',
+  yellow = '#f7c843',
 })
 
 require('feline').add_theme(themes.MIDNIGHT, {

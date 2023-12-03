@@ -12,7 +12,7 @@ M.themes = {
   KANAGAWA = 'kanagawa',
 }
 
-M.theme = M.themes.ROSE_PINE
-M.transparent = true
+M.theme = M.themes.GITHUB
+M.transparent = false
 
 return M

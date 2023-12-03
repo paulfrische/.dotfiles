@@ -300,4 +300,4 @@ schemes:
       cyan: "0xebbcba"
       white: "0xe0def4"
 
-colors: *rose-pine
+colors: *github
