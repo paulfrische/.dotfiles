@@ -1,7 +1,7 @@
 local M = {}
 
 M.icon = {
-  provider = ' 󰣠 ',
+  provider = '  ',
   hl = {
     fg = 'red',
   },

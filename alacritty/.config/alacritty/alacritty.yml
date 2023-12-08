@@ -9,10 +9,10 @@ window:
   dynamic_title: true
 font:
   normal:
-    family: MonaspiceAr NFM
+    family: Iosevka Nerd Font Mono
     style: Bold
   bold:
-    family: MonaspiceAr NFM
+    family: Iosevka Nerd Font Mono
     style: ExtraBold
   italic:
     family: MonaspiceRn NFM
@@ -300,4 +300,4 @@ schemes:
       cyan: "0xebbcba"
       white: "0xe0def4"
 
-colors: *github
+colors: *tokyonight

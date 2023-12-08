@@ -2,14 +2,13 @@
 return {
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
-    { 'mrjones2014/nvim-ts-rainbow' },
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
     { 'nvim-treesitter/nvim-treesitter-context' },
   },
   build = ':TSUpdate',
   config = function()
     require('nvim-treesitter.configs').setup({
-      ensure_installed = { 'lua', 'rust', 'python', 'html', 'css' },
+      ensure_installed = { 'lua', 'c', 'vim', 'vimdoc', 'query' },
       auto_install = true,
       textobjects = {
         select = {
@@ -39,11 +38,6 @@ return {
       },
       indent = {
         enable = false,
-      },
-      rainbow = {
-        enable = false,
-        extended_mode = true,
-        max_file_lines = nil,
       },
     })
 

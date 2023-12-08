@@ -1,14 +1,9 @@
 local M = {}
 
-M.toggle_inlay_hints = function()
-  vim.lsp.inlay_hint(0, nil)
-end
-
 ---@diagnostic disable-next-line: unused-local
 M.attach = function(client, buffnr)
   local bufmap = require('paulfrische.util').bufmap
 
-  bufmap('n', '<leader>i', M.toggle_inlay_hints)
   bufmap('n', 'K', vim.lsp.buf.hover)
   bufmap('n', 'gd', vim.lsp.buf.definition)
   bufmap('n', 'gD', vim.lsp.buf.declaration)
@@ -22,17 +17,15 @@ M.attach = function(client, buffnr)
   bufmap({ 'n', 'v' }, '<leader>a', vim.lsp.buf.code_action)
   bufmap('n', '<leader>e', require('trouble').toggle)
 
-  -- if client.server_capabilities.inlayHintProvider.resolveProvider then
-  --   M.toggle_inlay_hints()
-  -- end
+  if client.server_capabilities.inlayHintProvider then
+    vim.lsp.inlay_hint.enable(0, true)
+  end
 end
 
 M.setup = function()
   require('neodev').setup({})
 
-  require('paulfrische.plugins.lsp.cmp').setup({
-    border = '',
-  })
+  require('paulfrische.plugins.lsp.cmp').setup({})
 
   -- require('mason').setup()
   require('mason-lspconfig').setup()

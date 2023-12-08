@@ -36,6 +36,8 @@ return {
           preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
         },
 
+        preview = false,
+
         prompt_prefix = ' 🔎 ',
         selection_caret = '➡️ ',
 
@@ -47,7 +49,7 @@ return {
 
         layout_strategy = 'center',
         layout_config = {
-          anchor = 'N',
+          anchor = 'CENTER',
         },
       },
     })

@@ -53,7 +53,6 @@ map('n', '<Tab>h', '<C-w>h', 'navigate splits like chars')
 map('n', '<Tab>j', '<C-w>j', 'navigate splits like chars')
 map('n', '<Tab>k', '<C-w>k', 'navigate splits like chars')
 map('n', '<Tab>l', '<C-w>l', 'navigate splits like chars')
-map('n', '<leader>h', '<cmd>split<CR>', 'open horizontal split')
 map('n', '<leader>v', '<cmd>vsplit<CR>', 'open vertical split')
 
 -- buffers

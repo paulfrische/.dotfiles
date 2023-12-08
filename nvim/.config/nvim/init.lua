@@ -4,6 +4,9 @@
 -- |  __/ (_| | |_| | | |  _|| |  | \__ \ (__| | | |  __/
 -- |_|   \__,_|\__,_|_| |_|  |_|  |_|___/\___|_| |_|\___|
 
+-- vim loader
+vim.loader.enable()
+
 -- TERMGUI COLORS 🏆
 vim.opt.termguicolors = true
 
