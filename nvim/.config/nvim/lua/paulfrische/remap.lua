@@ -64,7 +64,7 @@ map('n', '<leader>nn', '<cmd>Neorg index<cr>', 'open notes')
 map('n', '<leader>nr', '<cmd>Neorg return<cr>', 'return from notes')
 
 -- open lazy ui
-map('n', '<leader>l', '<cmd>Lazy<cr>', 'open lazy.nvim ui')
+map('n', '<leader>p', '<cmd>Lazy<cr>', 'open lazy.nvim ui')
 
 -- toggle hex editor ('binary')
 map('n', '<leader>b', '<cmd>HexToggle<cr>', 'toggle hex editor')

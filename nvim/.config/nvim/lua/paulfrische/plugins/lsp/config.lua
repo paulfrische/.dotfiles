@@ -17,6 +17,8 @@ M.attach = function(client, buffnr)
   bufmap({ 'n', 'v' }, '<leader>a', vim.lsp.buf.code_action)
   bufmap('n', '<leader>e', require('trouble').toggle)
 
+  bufmap('n', 'go', '<cmd>Lspsaga outline<cr>')
+
   if client.server_capabilities.inlayHintProvider then
     vim.lsp.inlay_hint.enable(0, true)
   end
@@ -103,6 +105,15 @@ M.setup = function()
           },
         },
       },
+    },
+  })
+
+  require('lspsaga').setup({
+    symbol_in_winbar = {
+      enable = false,
+    },
+    lightbulb = {
+      enable = false,
     },
   })
 end

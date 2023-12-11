@@ -10,6 +10,8 @@ return {
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
 
+    { 'nvimdev/lspsaga.nvim' },
+
     { 'hrsh7th/nvim-cmp' },
     { 'hrsh7th/cmp-cmdline' },
     { 'hrsh7th/cmp-path' },

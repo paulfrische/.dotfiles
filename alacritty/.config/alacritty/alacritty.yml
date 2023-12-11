@@ -9,16 +9,16 @@ window:
   dynamic_title: true
 font:
   normal:
-    family: Iosevka Nerd Font Mono
-    style: Bold
+    family: FiraCode Nerd Font Mono
+    style: Medium
   bold:
-    family: Iosevka Nerd Font Mono
+    family: FiraCode Nerd Font Mono
     style: ExtraBold
   italic:
-    family: MonaspiceRn NFM
+    family: FiraCode Nerd Font Mono
     style: Medium Italic
   bold_italic:
-    family: MonaspiceRn NFM
+    family: FiraCode Nerd Font Mono
     style: ExtraBold Italic
   size: 12.0
 

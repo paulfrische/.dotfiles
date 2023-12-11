@@ -6,6 +6,7 @@ return {
     { 'nvim-treesitter/nvim-treesitter-context' },
   },
   build = ':TSUpdate',
+
   config = function()
     require('nvim-treesitter.configs').setup({
       ensure_installed = { 'lua', 'c', 'vim', 'vimdoc', 'query' },
@@ -37,7 +38,7 @@ return {
         enable = true,
       },
       indent = {
-        enable = false,
+        enable = true,
       },
     })
 
