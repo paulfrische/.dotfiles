@@ -19,3 +19,6 @@ crates.io:
 # Cargo add-ons
 I use cargo-generate:
 `$ cargo install cargo-generate`
+
+# Neovim
+My neovim config can be found [here](https://github.com/paulfrische/nvim)
