@@ -1,20 +1,8 @@
+PROMPT="%F{green}%~%f %F{red}λ%f "
 
 export PATH="$HOME/.local/bin:$HOME/.local/share/bob/nvim-bin:$PATH"
-export ZSH="$HOME/.oh-my-zsh"
 export XDG_CONFIG_HOME="$HOME/.config"
 export GTK_THEME="rose-pine-gtk"
-
-fpath+=~/.zshfunc
-
-ZSH_THEME="robbyrussell" # set by `omz`
-
-export NVM_LAZY_LOAD=true
-export NVM_COMPLETION=true
-
-plugins=(git zsh-nvm)
-
-source $ZSH/oh-my-zsh.sh
-
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -31,30 +19,17 @@ function mkcd() {
 bindkey -v
 alias v="nvim"
 alias p="python"
-alias n="nvim ."
 alias nrcj="z ~/.config/nvim/ && nvim init.lua"
-alias nkitty="nvim ~/.config/kitty/kitty.conf"
 alias ls="exa -lah --icons"
-alias nzsh="nvim ~/.zshrc"
-alias jbsp="z ~/.config/bspwm"
-alias mountd="doas mount /dev/sdb ~/d"
 alias jd="z ~/d"
 alias yay="yay --sudo doas --sudoflags -- --save"
-alias docker="doas podman"
-alias lg="lazygit"
-alias vc="nvim --cmd 'set rtp+=.'"
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias config-add='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add -u'
 alias c="cargo"
 alias cd="z"
 
-zstyle ':completion:*' menu select
-
-# eval "$(starship init zsh)"
+alias gst="git status"
+alias gc="git commit"
+alias gp="git push"
 
 eval "$(zoxide init zsh)"
 
 colorscript -r
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
