@@ -4,6 +4,7 @@ set -e
 
 
 stow -vt $HOME alacritty
+stow -vt $HOME kitty
 stow -vt $HOME i3
 stow -vt $HOME launchme
 stow -vt $HOME zsh
