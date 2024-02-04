@@ -3,22 +3,22 @@
 # client.focused_inactive #3d59a1 #3d59a1 #1f2335 #2ac3de   #2ac3de
 # client.unfocused        #3d59a1 #3d59a1 #1f2335 #2ac3de   #2ac3de
 
-bar {
-        status_command i3status
-        position top
-
-        colors {
-            background #282828
-            statusline #ebdbb2
-            separator #928374
-
-            focused_workspace  #689d6a #689d6a #282828
-            active_workspace   #98971a #98971a #282828
-            inactive_workspace #3c3836 #3c3836 #282828
-            urgent_workspace   #d65d0e #d65d0e #282828
-            binding_mode       #282828 #cc241d #ebdbb2
-        }
-}
+# bar {
+#         status_command i3status
+#         position bottom
+#
+#         # colors {
+#         #     background #282828
+#         #     statusline #ebdbb2
+#         #     separator #928374
+#         #
+#         #     focused_workspace  #689d6a #689d6a #282828
+#         #     active_workspace   #98971a #98971a #282828
+#         #     inactive_workspace #3c3836 #3c3836 #282828
+#         #     urgent_workspace   #d65d0e #d65d0e #282828
+#         #     binding_mode       #282828 #cc241d #ebdbb2
+#         # }
+# }
 
 set $mod Mod4
 
@@ -127,6 +127,9 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+bindsym $mod+minus scratchpad show
+bindsym $mod+equal move scratchpad
+
 mode "resize" {
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
@@ -142,4 +145,4 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 default_border pixel 1
-gaps inner 6
+gaps inner 3
