@@ -14,6 +14,9 @@ function mkcd() {
 
 set -o vi
 
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+
 alias v="nvim"
 alias p="python"
 alias nrcj="z ~/.config/nvim/ && nvim init.lua"
