@@ -1,0 +1,19 @@
+import = ["~/.config/alacritty/kanagawa.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 13
+
+[font.normal]
+# family = "JetBrainsMonoNerdFont"
+family = "CaskaydiaMonoNerdFont"
+style = "SemiBold"
+
+[window]
+dynamic_title = true
+
+[window.padding]
+x = 10
+y = 10
