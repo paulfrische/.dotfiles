@@ -2,7 +2,7 @@
 
 chromium &
 discord &
-kitty &
+alacritty &
 pavucontrol &
 mpd &
 ario &
