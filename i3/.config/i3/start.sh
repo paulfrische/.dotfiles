@@ -10,8 +10,10 @@ nitrogen --restore &
 
 pkill picom
 pkill redshift-gtk
+pkill mpd
 picom &
 redshift-gtk &
+mpd &
 
 echo "---" >> ~/polybar.log
 pkill polybar

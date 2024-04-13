@@ -1,15 +1,14 @@
-import = ["~/.config/alacritty/kanagawa.toml"]
+import = ["~/.config/alacritty/gruvbox.toml"]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
 size = 11
-
-[font.normal]
-family = "JetBrainsMonoNerdFont"
-# family = "CaskaydiaMonoNerdFont"
-style = "SemiBold"
+normal = { family = "JetBrains Mono Nerd Font Mono", style = "Medium" }
+bold = { family = "JetBrains Mono Nerd Font Mono", style = "Bold" }
+italic = { family = "JetBrains Mono Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "JetBrains Mono Nerd Font Mono", style = "Bold Italic" }
 
 [window]
 dynamic_title = true
