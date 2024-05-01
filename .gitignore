@@ -1,5 +1,6 @@
 tmux/.config/tmux/plugins
 emacs/.config/emacs/*
+gtk/.config/gtk-3.0/bookmarks
 !emacs/.config/emacs/init.el
 !emacs/.config/emacs/config.org
 !emacs/.config/emacs/start.org
