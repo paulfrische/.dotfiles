@@ -8,4 +8,5 @@ stow -vDt $HOME i3
 stow -vDt $HOME gtk
 stow -vDt $HOME launchme
 stow -vDt $HOME bash
+stow -vDt $HOME nushell
 stow -vDt $HOME polybar
