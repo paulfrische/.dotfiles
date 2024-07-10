@@ -1,14 +1,14 @@
-import = ["~/.config/alacritty/cyberdream.toml"]
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
 size = 10.5
-normal = { family = "JetBrains Mono Nerd Font Mono", style = "Medium" }
-bold = { family = "JetBrains Mono Nerd Font Mono", style = "Bold" }
-italic = { family = "JetBrains Mono Nerd Font Mono", style = "Italic" }
-bold_italic = { family = "JetBrains Mono Nerd Font Mono", style = "Bold Italic" }
+normal = { family = "JetBrains Mono Nerd Font", style = "SemiBold" }
+bold = { family = "JetBrains Mono Nerd Font", style = "Bold" }
+italic = { family = "JetBrains Mono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrains Mono Nerd Font", style = "Bold Italic" }
 
 [window]
 dynamic_title = true

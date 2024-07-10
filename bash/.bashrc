@@ -31,17 +31,23 @@ alias ls="exa -lah --icons"
 alias jd="z ~/d"
 alias yay="yay --sudo doas --sudoflags -- --save"
 alias c="cargo"
+
 alias cd="z"
+alias d="zi"
 
 alias gst="git status"
 alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
 
+alias kill="ps -aux | fzf | awk '{print \$2}' | xargs kill"
+
 alias vtd="nvim $(today).md"
 alias ctd="pandoc -o $(today).pdf $(today).md"
 
 alias odin="/home/paul/d/repos/Odin/odin"
+
+source <(fzf --bash)
 
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
