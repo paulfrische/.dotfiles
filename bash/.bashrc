@@ -3,7 +3,7 @@
 #
 
 export PATH="$HOME/.local/bin:$HOME/.local/share/bob/nvim-bin:$PATH"
-export MANPAGER="nvim +Man!"
+# export MANPAGER="nvim +Man!"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return

@@ -29,6 +29,7 @@ exec /home/paul/.config/i3/autostart.sh
 
 assign [class="Alacritty"] 1
 assign [class="Chromium"] 2
+assign [class="Brave"] 2
 assign [class="discord"] 3
 assign [class="Pavucontrol"] 5
 assign [class="Ario"] 7
@@ -54,8 +55,7 @@ bindsym $mod+shift+s exec flameshot gui
 
 bindsym $mod+w kill
 
-# bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec --no-startup-id launchme -c ~/.launchme.ron
+bindsym $mod+d exec --no-startup-id dmenu_run
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -77,8 +77,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+Control+h split h
-bindsym $mod+v split v
+bindsym $mod+Shift+h split h
+bindsym $mod+Shift+v split v
 bindsym $mod+f fullscreen toggle
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle

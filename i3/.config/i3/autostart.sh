@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-chromium &
+brave &
 discord &
 alacritty &
-pavucontrol &
+pwvucontrol &
 ario &
-thunderbird &
+betterbird &

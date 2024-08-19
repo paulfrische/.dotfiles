@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 MONITOR1=DP-1
 MONITOR2=HDMI-0
@@ -6,14 +6,14 @@ MONITOR2=HDMI-0
 xrandr --output $MONITOR1 --left-of $MONITOR2
 xrandr --output $MONITOR1 --primary
 
-nitrogen --restore &
+# nitrogen --restore &
 
 pkill picom
 pkill redshift-gtk
-pkill mpd
-picom &
+mpd --kill
 redshift-gtk &
-mpd &
+picom &
+mpd
 
 echo "---" >> ~/polybar.log
 pkill polybar

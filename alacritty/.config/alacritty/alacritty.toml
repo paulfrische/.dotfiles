@@ -4,13 +4,14 @@ import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 TERM = "xterm-256color"
 
 [font]
-size = 10.5
+size = 11.5
 normal = { family = "JetBrains Mono Nerd Font", style = "SemiBold" }
 bold = { family = "JetBrains Mono Nerd Font", style = "Bold" }
 italic = { family = "JetBrains Mono Nerd Font", style = "Italic" }
 bold_italic = { family = "JetBrains Mono Nerd Font", style = "Bold Italic" }
 
 [window]
+opacity = 1.0
 dynamic_title = true
 
 [window.padding]
