@@ -5,4 +5,4 @@ discord &
 alacritty &
 pwvucontrol &
 ario &
-betterbird &
+thunderbird &

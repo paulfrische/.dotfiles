@@ -6,7 +6,7 @@ MONITOR2=HDMI-0
 xrandr --output $MONITOR1 --left-of $MONITOR2
 xrandr --output $MONITOR1 --primary
 
-# nitrogen --restore &
+feh --bg-fill $WALLPAPER_PATH
 
 pkill picom
 pkill redshift-gtk
